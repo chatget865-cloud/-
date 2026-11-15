@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: oman-majd-quiz
+    runtime: python
+    plan: starter
+    region: frankfurt
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    healthCheckPath: /health
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: oman-majd-db
+          property: connectionString
+
+databases:
+  - name: oman-majd-db
+    databaseName: oman_majd
+    user: oman_majd_app
+    region: frankfurt
+    plan: 0.1c-256mb
+    ipAllowList: []

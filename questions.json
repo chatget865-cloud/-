@@ -1,0 +1,2102 @@
+[
+  {
+    "id": 1,
+    "axis": "history",
+    "level": "easy",
+    "question": "في أي عام بدأت النهضة العُمانية الحديثة؟",
+    "options": [
+      "1960",
+      "1965",
+      "1970",
+      "1980"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 2,
+    "axis": "history",
+    "level": "easy",
+    "question": "من مؤسس الدولة البوسعيدية؟",
+    "options": [
+      "سعيد بن سلطان",
+      "أحمد بن سعيد",
+      "قابوس بن سعيد",
+      "هيثم بن طارق"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 3,
+    "axis": "history",
+    "level": "easy",
+    "question": "في أي عام تولى السلطان هيثم بن طارق الحكم؟",
+    "options": [
+      "2018",
+      "2019",
+      "2020",
+      "2021"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 4,
+    "axis": "history",
+    "level": "easy",
+    "question": "ما اسم السلالة الحاكمة حاليًا في سلطنة عُمان؟",
+    "options": [
+      "اليعاربة",
+      "النباهنة",
+      "البوسعيد",
+      "السلاجقة"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 5,
+    "axis": "history",
+    "level": "easy",
+    "question": "في أي عام انضمت سلطنة عُمان إلى الأمم المتحدة؟",
+    "options": [
+      "1970",
+      "1971",
+      "1975",
+      "1980"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 6,
+    "axis": "history",
+    "level": "easy",
+    "question": "أي دولة أوروبية سيطرت على مسقط حتى عام 1650؟",
+    "options": [
+      "فرنسا",
+      "البرتغال",
+      "هولندا",
+      "إسبانيا"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 7,
+    "axis": "history",
+    "level": "easy",
+    "question": "في أي قرن تأسست دولة البوسعيد؟",
+    "options": [
+      "السادس عشر",
+      "السابع عشر",
+      "الثامن عشر",
+      "التاسع عشر"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 8,
+    "axis": "history",
+    "level": "easy",
+    "question": "أي مدينة كانت مركزًا للحكم العُماني في شرق إفريقيا؟",
+    "options": [
+      "ممباسا",
+      "زنجبار",
+      "دار السلام",
+      "مقديشو"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 9,
+    "axis": "history",
+    "level": "easy",
+    "question": "ما اسم السفينة العُمانية التي وصلت نيويورك عام 1840؟",
+    "options": [
+      "فتح الخير",
+      "صحار",
+      "سلطانة",
+      "الغنجة"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 10,
+    "axis": "history",
+    "level": "easy",
+    "question": "أي دولة وقعت معها عُمان معاهدة صداقة وتجارة عام 1833؟",
+    "options": [
+      "فرنسا",
+      "الولايات المتحدة",
+      "ألمانيا",
+      "إسبانيا"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 11,
+    "axis": "history",
+    "level": "easy",
+    "question": "ما اليوم الذي تبدأ فيه إجازة اليوم الوطني وفق المرسوم السلطاني 15/2025؟",
+    "options": [
+      "18 نوفمبر",
+      "19 نوفمبر",
+      "20 نوفمبر",
+      "22 نوفمبر"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 12,
+    "axis": "history",
+    "level": "easy",
+    "question": "من السلطان الذي سبق السلطان قابوس بن سعيد؟",
+    "options": [
+      "سعيد بن سلطان",
+      "أحمد بن سعيد",
+      "سعيد بن تيمور",
+      "هيثم بن طارق"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 13,
+    "axis": "history",
+    "level": "medium",
+    "question": "في أي عام انتهى الوجود البرتغالي في مسقط؟",
+    "options": [
+      "1507",
+      "1600",
+      "1650",
+      "1700"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 14,
+    "axis": "history",
+    "level": "medium",
+    "question": "أي معاهدة سبقت المعاهدة العُمانية الأمريكية لعام 1833؟",
+    "options": [
+      "معاهدة الصداقة مع بريطانيا عام 1798",
+      "معاهدة عام 1900",
+      "معاهدة عام 1920",
+      "معاهدة عام 1971"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 15,
+    "axis": "history",
+    "level": "medium",
+    "question": "ما النشاط الذي أسهم في ربط موانئ عُمان بموانئ الهند وشرق إفريقيا تاريخيًا؟",
+    "options": [
+      "تبادل السلع عبر شبكات الملاحة البحرية",
+      "التجارة البرية عبر الصحراء الكبرى",
+      "التجارة النهرية داخل شبه الجزيرة العربية",
+      "النقل عبر القوافل في أوروبا"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 16,
+    "axis": "history",
+    "level": "medium",
+    "question": "في أي عام تأسست وزارة الخارجية العُمانية بشكلها الحديث؟",
+    "options": [
+      "1960",
+      "1970",
+      "1980",
+      "1990"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 17,
+    "axis": "history",
+    "level": "medium",
+    "question": "من المبعوث العُماني الذي وصل إلى نيويورك عام 1840؟",
+    "options": [
+      "أحمد بن النعمان",
+      "أحمد بن سعيد",
+      "سعيد بن تيمور",
+      "طارق بن تيمور"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 18,
+    "axis": "history",
+    "level": "medium",
+    "question": "أي عبارة تصف العلاقة بين موقع عُمان ونشاطها التجاري التاريخي؟",
+    "options": [
+      "موقعها البحري أتاح الاتصال بموانئ المحيط الهندي",
+      "أدى موقعها إلى انقطاع التجارة البحرية",
+      "اعتمدت على التجارة البرية فقط",
+      "لم تكن للموانئ أهمية في علاقاتها الخارجية"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 19,
+    "axis": "history",
+    "level": "medium",
+    "question": "ما رقم المرسوم السلطاني الذي عدل موعد إجازة اليوم الوطني عام 2025؟",
+    "options": [
+      "6/2021",
+      "15/2025",
+      "88/2022",
+      "100/2020"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 20,
+    "axis": "history",
+    "level": "medium",
+    "question": "في أي شهر صدر المرسوم السلطاني 15/2025؟",
+    "options": [
+      "يناير",
+      "مارس",
+      "يوليو",
+      "نوفمبر"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 21,
+    "axis": "history",
+    "level": "medium",
+    "question": "أي نتيجة اقتصادية ترتبط تاريخيًا بنشاط الموانئ العُمانية؟",
+    "options": [
+      "توقف التبادل الثقافي",
+      "تنوع السلع والتبادل مع مناطق مختلفة",
+      "انحصار التجارة في منطقة واحدة",
+      "انعدام الاتصال بشرق إفريقيا"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 22,
+    "axis": "history",
+    "level": "medium",
+    "question": "أي حدث وقع قبل وصول السفينة «سلطانة» إلى نيويورك سنة 1840؟",
+    "options": [
+      "انضمام عُمان للأمم المتحدة",
+      "تولي السلطان هيثم الحكم",
+      "توقيع معاهدة عُمان والولايات المتحدة عام 1833",
+      "تحديث العلم عام 2004"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 23,
+    "axis": "history",
+    "level": "medium",
+    "question": "من السلطان الذي ارتبط اسمه بتوسّع النفوذ العُماني في زنجبار خلال القرن التاسع عشر؟",
+    "options": [
+      "سعيد بن سلطان",
+      "قابوس بن سعيد",
+      "هيثم بن طارق",
+      "سعيد بن تيمور"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 24,
+    "axis": "history",
+    "level": "medium",
+    "question": "ما الترتيب الزمني الصحيح للأحداث الآتية؟",
+    "options": [
+      "رحلة سلطانة ثم معاهدة 1833 ثم النهضة",
+      "معاهدة 1833 ثم رحلة سلطانة ثم النهضة",
+      "النهضة ثم رحلة سلطانة ثم المعاهدة",
+      "النهضة ثم المعاهدة ثم الرحلة"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 25,
+    "axis": "history",
+    "level": "medium",
+    "question": "أي سلالة حاكمة ارتبطت باستعادة مسقط من البرتغاليين عام 1650؟",
+    "options": [
+      "البوسعيد",
+      "اليعاربة",
+      "النباهنة",
+      "السلاجقة"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 26,
+    "axis": "history",
+    "level": "medium",
+    "question": "أي دور أدّاه المبعوث أحمد بن النعمان في تاريخ العلاقات العُمانية الأمريكية؟",
+    "options": [
+      "قيادة بعثة دبلوماسية إلى الولايات المتحدة",
+      "تأسيس الأمم المتحدة",
+      "إعلان رؤية عُمان 2040",
+      "قيادة حملة تحرير مسقط من البرتغاليين"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/en/ministry/about-us/history-of-the-foreign-ministry/"
+  },
+  {
+    "id": 27,
+    "axis": "history",
+    "level": "medium",
+    "question": "ما الدلالة الدبلوماسية لانضمام عُمان إلى الأمم المتحدة عام 1971؟",
+    "options": [
+      "إنهاء العلاقات الثنائية",
+      "توسيع المشاركة في المحافل الدولية",
+      "التوقف عن إبرام الاتفاقيات",
+      "إغلاق البعثات الدبلوماسية"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 28,
+    "axis": "history",
+    "level": "medium",
+    "question": "أي مدينة عُمانية كانت مركزًا مهمًا للحكم والعلم في الداخل؟",
+    "options": [
+      "نزوى",
+      "الدقم",
+      "خصب",
+      "مرباط"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 29,
+    "axis": "history",
+    "level": "medium",
+    "question": "أي حدث يأتي زمنيًا بين معاهدة 1833 وبداية النهضة الحديثة عام 1970؟",
+    "options": [
+      "تأسيس دولة البوسعيد",
+      "وصول السفينة سلطانة إلى نيويورك عام 1840",
+      "طرد البرتغاليين عام 1650",
+      "صدور مرسوم 15/2025"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 30,
+    "axis": "history",
+    "level": "medium",
+    "question": "أي فترة تاريخية ارتبطت بتوسع التجارة العُمانية في شرق إفريقيا؟",
+    "options": [
+      "القرن التاسع عشر",
+      "القرن الحادي والعشرون",
+      "القرن الخامس عشر فقط",
+      "القرن الثالث الميلادي"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 31,
+    "axis": "history",
+    "level": "medium",
+    "question": "ما العام الذي اعتُمد فيه العلم الوطني العُماني الحديث لأول مرة؟",
+    "options": [
+      "1950",
+      "1970",
+      "2004",
+      "2020"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 32,
+    "axis": "history",
+    "level": "medium",
+    "question": "ما العام الذي حُدّث فيه العلم الوطني العُماني؟",
+    "options": [
+      "1980",
+      "1995",
+      "2004",
+      "2020"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 33,
+    "axis": "history",
+    "level": "hard",
+    "question": "أي استنتاج تدعمه معاهدة 1833 ورحلة السفينة سلطانة عام 1840 معًا؟",
+    "options": [
+      "أن عُمان لم تتواصل مع العالم الخارجي",
+      "أن العلاقات التجارية رافقها نشاط دبلوماسي عبر البحار",
+      "أن الرحلتين حدثتا بعد عام 1970",
+      "أن التجارة العُمانية اقتصرت على البر"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 34,
+    "axis": "history",
+    "level": "hard",
+    "question": "أي تسلسل يوضح انتقال عُمان من التواصل الثنائي إلى المشاركة متعددة الأطراف؟",
+    "options": [
+      "الانضمام للأمم المتحدة ثم معاهدة 1833",
+      "معاهدة 1833 ثم الانضمام للأمم المتحدة 1971",
+      "تحديث العلم 2004 ثم معاهدة 1833",
+      "بداية النهضة 1970 ثم معاهدة 1833"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 35,
+    "axis": "history",
+    "level": "hard",
+    "question": "ما الترتيب التاريخي الصحيح؟",
+    "options": [
+      "تأسيس البوسعيد ثم طرد البرتغاليين ثم النهضة",
+      "طرد البرتغاليين ثم تأسيس البوسعيد ثم النهضة",
+      "النهضة ثم تأسيس البوسعيد ثم طرد البرتغاليين",
+      "تأسيس البوسعيد ثم النهضة ثم طرد البرتغاليين"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 36,
+    "axis": "history",
+    "level": "hard",
+    "question": "أي حدث سبق تأسيس دولة البوسعيد؟",
+    "options": [
+      "تولي السلطان قابوس",
+      "طرد البرتغاليين من مسقط",
+      "وصول سلطانة إلى نيويورك",
+      "انضمام عُمان للأمم المتحدة"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 37,
+    "axis": "history",
+    "level": "hard",
+    "question": "ما الفرق الصحيح بين اعتماد العلم العُماني عام 1970 وتحديثه عام 2004؟",
+    "options": [
+      "حدث التحديث قبل الاعتماد",
+      "الاعتماد أنشأ العلم الحديث والتحديث عدّل مواصفاته لاحقًا",
+      "كلاهما يشير إلى إلغاء العلم",
+      "لا علاقة لأي منهما بالعلم الوطني"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/flag-emblem-and-national-anthem/"
+  },
+  {
+    "id": 38,
+    "axis": "history",
+    "level": "hard",
+    "question": "أي تسلسل من الأقدم إلى الأحدث صحيح؟",
+    "options": [
+      "تحديث العلم 2004 ثم معاهدة 1833 ثم انضمام الأمم المتحدة",
+      "معاهدة 1833 ثم انضمام الأمم المتحدة 1971 ثم تحديث العلم 2004",
+      "انضمام الأمم المتحدة ثم معاهدة 1833 ثم تحديث العلم",
+      "تحديث العلم ثم الانضمام للأمم المتحدة ثم معاهدة 1833"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 39,
+    "axis": "history",
+    "level": "hard",
+    "question": "أي عبارة تفسر أثر التجارة البحرية في تاريخ عُمان؟",
+    "options": [
+      "حصرت علاقاتها داخل الجزيرة العربية",
+      "أسهمت في بناء علاقات تجارية ودبلوماسية عبر المحيط الهندي",
+      "ألغت دور الموانئ",
+      "منعت التواصل مع شرق إفريقيا"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 40,
+    "axis": "history",
+    "level": "hard",
+    "question": "أي مجموعة أحداث مرتبة من الأقدم إلى الأحدث؟",
+    "options": [
+      "معاهدة 1833 ثم طرد البرتغاليين ثم النهضة",
+      "طرد البرتغاليين ثم معاهدة 1833 ثم النهضة",
+      "النهضة ثم طرد البرتغاليين ثم معاهدة 1833",
+      "النهضة ثم معاهدة 1833 ثم طرد البرتغاليين"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 41,
+    "axis": "geography",
+    "level": "easy",
+    "question": "كم عدد محافظات سلطنة عُمان؟",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 42,
+    "axis": "geography",
+    "level": "easy",
+    "question": "ما عاصمة سلطنة عُمان؟",
+    "options": [
+      "نزوى",
+      "مسقط",
+      "صحار",
+      "صلالة"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 43,
+    "axis": "geography",
+    "level": "easy",
+    "question": "في أي محافظة تقع ولاية صلالة؟",
+    "options": [
+      "الوسطى",
+      "ظفار",
+      "الداخلية",
+      "جنوب الشرقية"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 44,
+    "axis": "geography",
+    "level": "easy",
+    "question": "ما المركز الإداري لمحافظة الداخلية؟",
+    "options": [
+      "عبري",
+      "نزوى",
+      "الرستاق",
+      "صور"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 45,
+    "axis": "geography",
+    "level": "easy",
+    "question": "في أي محافظة تقع ولاية خصب؟",
+    "options": [
+      "البريمي",
+      "مسندم",
+      "مسقط",
+      "الظاهرة"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 46,
+    "axis": "geography",
+    "level": "easy",
+    "question": "أي محافظة تضم ولاية الدقم؟",
+    "options": [
+      "ظفار",
+      "الوسطى",
+      "الداخلية",
+      "جنوب الشرقية"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 47,
+    "axis": "geography",
+    "level": "easy",
+    "question": "ما المركز الإداري لمحافظة شمال الباطنة؟",
+    "options": [
+      "صحم",
+      "صحار",
+      "شناص",
+      "السويق"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 48,
+    "axis": "geography",
+    "level": "easy",
+    "question": "في أي محافظة تقع ولاية بهلا؟",
+    "options": [
+      "الظاهرة",
+      "الداخلية",
+      "جنوب الباطنة",
+      "شمال الشرقية"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 49,
+    "axis": "geography",
+    "level": "easy",
+    "question": "ما الظاهرة المناخية الموسمية المرتبطة بصيف محافظة ظفار؟",
+    "options": [
+      "الخريف",
+      "الثلوج القطبية",
+      "الرياح الموسمية الشتوية في أوروبا",
+      "الجفاف الدائم"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/en/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 50,
+    "axis": "geography",
+    "level": "medium",
+    "question": "أي ثلاث ولايات تتبع محافظة الظاهرة؟",
+    "options": [
+      "عبري وضنك وينقل",
+      "نزوى وبهلا ومنح",
+      "صحار وصحم وشناص",
+      "صور ومصيرة وجعلان بني بوعلي"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 51,
+    "axis": "geography",
+    "level": "medium",
+    "question": "ما المركز الإداري لمحافظة جنوب الباطنة؟",
+    "options": [
+      "بركاء",
+      "الرستاق",
+      "نخل",
+      "المصنعة"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 52,
+    "axis": "geography",
+    "level": "medium",
+    "question": "ما المركز الإداري لمحافظة شمال الشرقية؟",
+    "options": [
+      "بدية",
+      "إبراء",
+      "القابل",
+      "المضيبي"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 53,
+    "axis": "geography",
+    "level": "medium",
+    "question": "ما المركز الإداري لمحافظة جنوب الشرقية؟",
+    "options": [
+      "إبراء",
+      "صور",
+      "مصيرة",
+      "بدية"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 54,
+    "axis": "geography",
+    "level": "medium",
+    "question": "أي ولاية تتبع محافظة البريمي؟",
+    "options": [
+      "ينقل",
+      "محضة",
+      "شناص",
+      "خصب"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 55,
+    "axis": "geography",
+    "level": "medium",
+    "question": "أي ولاية تتبع محافظة مسقط؟",
+    "options": [
+      "إزكي",
+      "قريات",
+      "بركاء",
+      "بدية"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 56,
+    "axis": "geography",
+    "level": "medium",
+    "question": "أي محافظة تضم ولاية مصيرة؟",
+    "options": [
+      "الوسطى",
+      "جنوب الشرقية",
+      "شمال الشرقية",
+      "ظفار"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 57,
+    "axis": "geography",
+    "level": "medium",
+    "question": "ما المركز الإداري لمحافظة الوسطى؟",
+    "options": [
+      "الدقم",
+      "هيما",
+      "محوت",
+      "الجازر"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 58,
+    "axis": "geography",
+    "level": "medium",
+    "question": "أي ولاية تتبع محافظة شمال الشرقية؟",
+    "options": [
+      "الكامل والوافي",
+      "وادي بني خالد",
+      "مصيرة",
+      "جعلان بني بوحسن"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 59,
+    "axis": "geography",
+    "level": "medium",
+    "question": "أي ولاية تتبع محافظة جنوب الباطنة؟",
+    "options": [
+      "لوى",
+      "وادي المعاول",
+      "الخابورة",
+      "صحم"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 60,
+    "axis": "geography",
+    "level": "medium",
+    "question": "أي ولاية تتبع محافظة مسندم؟",
+    "options": [
+      "مدحاء",
+      "محضة",
+      "السنينة",
+      "ينقل"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 61,
+    "axis": "geography",
+    "level": "medium",
+    "question": "أي ولاية تضم سوقًا تاريخيًا مشهورًا في محافظة مسقط؟",
+    "options": [
+      "السيب",
+      "مطرح",
+      "بوشر",
+      "العامرات"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 62,
+    "axis": "geography",
+    "level": "medium",
+    "question": "أي محافظة تضم ولاية شليم وجزر الحلانيات؟",
+    "options": [
+      "الوسطى",
+      "ظفار",
+      "جنوب الشرقية",
+      "مسندم"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 63,
+    "axis": "geography",
+    "level": "medium",
+    "question": "أي محافظة تقع بين شمال عُمان ومحافظة ظفار وتضم ميناء الدقم؟",
+    "options": [
+      "الداخلية",
+      "الوسطى",
+      "الظاهرة",
+      "البريمي"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 64,
+    "axis": "geography",
+    "level": "medium",
+    "question": "أي ولاية تضم منطقة الخوير التي تقع فيها مؤسسات حكومية وسفارات؟",
+    "options": [
+      "مطرح",
+      "بوشر",
+      "السيب",
+      "قريات"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 65,
+    "axis": "geography",
+    "level": "hard",
+    "question": "أي مجموعة تتكون جميع ولاياتها من محافظة مسندم؟",
+    "options": [
+      "خصب وبخا ودبا ومدحاء",
+      "خصب ومحضة ودبا وبخا",
+      "مدحاء والسنينة وخصب ودبا",
+      "بخا وينقل وخصب ودبا"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 66,
+    "axis": "geography",
+    "level": "hard",
+    "question": "أي زوج من الولايات يتبع محافظتين مختلفتين؟",
+    "options": [
+      "صحار وصحم",
+      "نزوى وبهلا",
+      "إبراء وصور",
+      "خصب وبخا"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 67,
+    "axis": "geography",
+    "level": "hard",
+    "question": "أي مجموعة تضم المراكز الإدارية لمحافظات الداخلية والظاهرة والوسطى بالترتيب؟",
+    "options": [
+      "نزوى وعبري وهيما",
+      "عبري ونزوى والدقم",
+      "الرستاق وعبري وهيما",
+      "نزوى وصحار وصلالة"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 68,
+    "axis": "geography",
+    "level": "hard",
+    "question": "أي المحافظات التالية لا تطل على البحر؟",
+    "options": [
+      "شمال الباطنة",
+      "الداخلية",
+      "جنوب الشرقية",
+      "مسقط"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 69,
+    "axis": "geography",
+    "level": "hard",
+    "question": "أي زوج من المحافظات يطل على بحر عُمان؟",
+    "options": [
+      "شمال الباطنة وجنوب الباطنة",
+      "الداخلية والظاهرة",
+      "الوسطى وظفار",
+      "الداخلية وشمال الشرقية"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 70,
+    "axis": "geography",
+    "level": "hard",
+    "question": "أي تسلسل جغرافي يبدأ بأقصى شمال عُمان وينتهي بجنوبها؟",
+    "options": [
+      "مسندم، مسقط، الوسطى، ظفار",
+      "مسندم، الوسطى، مسقط، ظفار",
+      "مسقط، مسندم، ظفار، الوسطى",
+      "مسندم، ظفار، مسقط، الوسطى"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/ar/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 71,
+    "axis": "heritage",
+    "level": "easy",
+    "question": "ما الأداة التقليدية التي تُعد جزءًا من الزي الرجالي العُماني في المناسبات؟",
+    "options": [
+      "الخنجر العُماني",
+      "السيف الأوروبي",
+      "الرمح الروماني",
+      "القوس الطويل"
+    ],
+    "answer": 0,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 72,
+    "axis": "heritage",
+    "level": "easy",
+    "question": "ما الوظيفة الأساسية للأفلاج العُمانية؟",
+    "options": [
+      "توليد الكهرباء",
+      "نقل المياه وتوزيعها",
+      "حفظ المحاصيل",
+      "نقل الركاب"
+    ],
+    "answer": 1,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 73,
+    "axis": "heritage",
+    "level": "easy",
+    "question": "أي مادة عطرية طبيعية اشتهرت بها محافظة ظفار تاريخيًا؟",
+    "options": [
+      "العنبر الصناعي",
+      "اللبان",
+      "الزعفران",
+      "الكاكاو"
+    ],
+    "answer": 1,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 74,
+    "axis": "heritage",
+    "level": "easy",
+    "question": "أي حرفة تقليدية ترتبط بصناعة الأواني من الطين؟",
+    "options": [
+      "الحدادة",
+      "الفخار",
+      "النسيج",
+      "النجارة"
+    ],
+    "answer": 1,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 75,
+    "axis": "heritage",
+    "level": "easy",
+    "question": "أي من الفنون التالية يُعد من الفنون التقليدية العُمانية؟",
+    "options": [
+      "الباليه",
+      "البرعة",
+      "الفلامنكو",
+      "التانغو"
+    ],
+    "answer": 1,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 76,
+    "axis": "heritage",
+    "level": "easy",
+    "question": "ما المادة التي تُستخدم أساسًا في صناعة الحصر والسلال التقليدية؟",
+    "options": [
+      "الزجاج",
+      "سعف النخيل",
+      "الحديد",
+      "الرخام"
+    ],
+    "answer": 1,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 77,
+    "axis": "heritage",
+    "level": "easy",
+    "question": "أي عبارة تشرح سبب اعتبار الأفلاج العُمانية تراثًا ذا قيمة عالمية؟",
+    "options": [
+      "لأنها منشآت حديثة لتوليد الطاقة",
+      "لأنها تعكس إدارة تقليدية للمياه والتعاون المجتمعي",
+      "لأنها أُنشئت حصريًا للملاحة البحرية",
+      "لأنها كانت أسوارًا دفاعية"
+    ],
+    "answer": 1,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 78,
+    "axis": "heritage",
+    "level": "easy",
+    "question": "أي من الأطعمة التالية يرتبط بالضيافة العُمانية التقليدية؟",
+    "options": [
+      "الحلوى العُمانية",
+      "السوشي",
+      "البيتزا",
+      "الباستا"
+    ],
+    "answer": 0,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 79,
+    "axis": "heritage",
+    "level": "easy",
+    "question": "أي من العناصر التالية يمثل تراثًا بحريًا عُمانيًا؟",
+    "options": [
+      "السفن الشراعية التقليدية",
+      "القطارات البخارية",
+      "الطائرات النفاثة",
+      "الزلاجات الثلجية"
+    ],
+    "answer": 0,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 80,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "في أي عام أُدرجت قلعة بهلا في قائمة التراث العالمي؟",
+    "options": [
+      "1987",
+      "1988",
+      "2000",
+      "2006"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 81,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "ما الموقع الذي أُدرج ضمن التراث العالمي عام 2006؟",
+    "options": [
+      "مدينة قلهات",
+      "أنظمة الأفلاج العُمانية",
+      "أرض اللبان",
+      "قلعة بهلا"
+    ],
+    "answer": 1,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 82,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "أي فن عُماني يرتبط بجبال وأودية ظفار؟",
+    "options": [
+      "البرعة",
+      "الأوبرا",
+      "الباليه",
+      "الفلامنكو"
+    ],
+    "answer": 0,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 83,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "في أي عام أُدرج فن البرعة في قائمة التراث الثقافي غير المادي؟",
+    "options": [
+      "2006",
+      "2010",
+      "2015",
+      "2022"
+    ],
+    "answer": 1,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 84,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "أي فن من الفنون العُمانية يجمع بين الشعر والإنشاد والمسير الاحتفالي؟",
+    "options": [
+      "العازي",
+      "الفلامنكو",
+      "الباليه",
+      "التانغو"
+    ],
+    "answer": 0,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 85,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "أي مجموعة تصف مكونات الخنجر العُماني التقليدي؟",
+    "options": [
+      "المقبض والنصل والغمد",
+      "المقبض والنصل والوتر",
+      "الغمد والوتر والريشة",
+      "النصل والريشة والقوس"
+    ],
+    "answer": 0,
+    "source": "https://ich.unesco.org/en/RL/al-khanjar-craft-skills-and-social-practices-01844"
+  },
+  {
+    "id": 86,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "أي موقع من الآتي يرتبط بتاريخ تجارة اللبان؟",
+    "options": [
+      "خور روري",
+      "قلعة نزوى",
+      "الجبل الأخضر",
+      "وادي بني خالد"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 87,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "في أي عام أُدرجت أرض اللبان ضمن قائمة التراث العالمي؟",
+    "options": [
+      "1987",
+      "1988",
+      "2000",
+      "2018"
+    ],
+    "answer": 2,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 88,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "ما الموقع الأثري العُماني المدرج في قائمة التراث العالمي عام 1988؟",
+    "options": [
+      "قلهات",
+      "بات والخطم والعين",
+      "قلعة بهلا",
+      "الأفلاج"
+    ],
+    "answer": 1,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 89,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "أي فن تقليدي مشترك بين عُمان والإمارات أُدرج عام 2014؟",
+    "options": [
+      "العيالة",
+      "البرعة",
+      "العازي",
+      "الرزفة"
+    ],
+    "answer": 0,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 90,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "ما اسم الشعر البدوي المغنّى المشترك بين عُمان والإمارات والمدرج عام 2012؟",
+    "options": [
+      "التغرودة",
+      "المقامة",
+      "الموشح",
+      "الزجل الأندلسي"
+    ],
+    "answer": 0,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 91,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "أي فن عُماني تقليدي يتضمن إلقاء الشعر بأسلوب احتفالي؟",
+    "options": [
+      "العازي",
+      "البرعة",
+      "العيالة",
+      "الرزحة"
+    ],
+    "answer": 0,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 92,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "ما العنصر المرتبط بالإبل وأُدرج ضمن التراث غير المادي عام 2022؟",
+    "options": [
+      "الحداء",
+      "الفلامنكو",
+      "السامبا",
+      "الباليه"
+    ],
+    "answer": 0,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 93,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "أي ممارسة مرتبطة بالخيل والإبل أُدرجت في اليونسكو عام 2018؟",
+    "options": [
+      "العرضة",
+      "البرعة",
+      "التغرودة",
+      "العازي"
+    ],
+    "answer": 0,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 94,
+    "axis": "heritage",
+    "level": "medium",
+    "question": "في أي عام أُدرجت مدينة قلهات القديمة ضمن التراث العالمي؟",
+    "options": [
+      "2000",
+      "2006",
+      "2012",
+      "2018"
+    ],
+    "answer": 3,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 95,
+    "axis": "heritage",
+    "level": "hard",
+    "question": "أي ترتيب زمني صحيح لإدراج المواقع العُمانية التالية؟",
+    "options": [
+      "بهلا ثم بات والخطم والعين ثم أرض اللبان",
+      "أرض اللبان ثم بهلا ثم بات",
+      "بات ثم أرض اللبان ثم بهلا",
+      "بهلا ثم أرض اللبان ثم بات"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 96,
+    "axis": "heritage",
+    "level": "hard",
+    "question": "أي زوج من العناصر أُدرج في قائمة التراث غير المادي عام 2012؟",
+    "options": [
+      "العازي والتغرودة",
+      "البرعة والعيالة",
+      "الخنجر والعرضة",
+      "القهوة والحناء"
+    ],
+    "answer": 0,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 97,
+    "axis": "heritage",
+    "level": "hard",
+    "question": "أي عبارة تميز بين التراث العالمي المادي والتراث الثقافي غير المادي؟",
+    "options": [
+      "قلعة بهلا موقع مادي والبرعة فن غير مادي",
+      "البرعة موقع أثري وبهلا فن غنائي",
+      "الأفلاج فن شعبي والعازي موقع أثري",
+      "قلهات ممارسة شفوية والتغرودة مدينة"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 98,
+    "axis": "heritage",
+    "level": "hard",
+    "question": "أي وصف يميز بين مدينة قلهات وفن البرعة؟",
+    "options": [
+      "قلهات موقع أثري والبرعة فن أدائي",
+      "قلهات فن أدائي والبرعة موقع أثري",
+      "كلاهما من التراث العمراني المادي",
+      "كلاهما من فنون الأداء غير المادية"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 99,
+    "axis": "heritage",
+    "level": "hard",
+    "question": "أي تسلسل صحيح لتسجيل الفنون والممارسات التالية؟",
+    "options": [
+      "البرعة ثم العازي ثم العيالة",
+      "العيالة ثم البرعة ثم العازي",
+      "العازي ثم العيالة ثم البرعة",
+      "العيالة ثم العازي ثم البرعة"
+    ],
+    "answer": 0,
+    "source": "https://ich.unesco.org/en/state/oman-OM?info=elements-on-the-lists"
+  },
+  {
+    "id": 100,
+    "axis": "heritage",
+    "level": "hard",
+    "question": "أي زوج يجمع موقعًا من التراث العالمي وعنصرًا من التراث غير المادي؟",
+    "options": [
+      "قلهات والخنجر العُماني",
+      "بهلا وقلهات",
+      "العازي والبرعة",
+      "الأفلاج وأرض اللبان"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 101,
+    "axis": "development",
+    "level": "easy",
+    "question": "ما السنة المستهدفة لنهاية رؤية عُمان 2040؟",
+    "options": [
+      "2030",
+      "2035",
+      "2040",
+      "2050"
+    ],
+    "answer": 2,
+    "source": "https://www.oman2040.om/الأسئلة-الشائعة/"
+  },
+  {
+    "id": 102,
+    "axis": "development",
+    "level": "easy",
+    "question": "كم عدد المحاور الرئيسية لرؤية عُمان 2040؟",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": 1,
+    "source": "https://www.oman2040.om/الأسئلة-الشائعة/"
+  },
+  {
+    "id": 103,
+    "axis": "development",
+    "level": "easy",
+    "question": "كم عدد الأولويات الوطنية لرؤية عُمان 2040؟",
+    "options": [
+      "8",
+      "10",
+      "12",
+      "15"
+    ],
+    "answer": 2,
+    "source": "https://www.oman2040.om/الأسئلة-الشائعة/"
+  },
+  {
+    "id": 104,
+    "axis": "development",
+    "level": "easy",
+    "question": "أي محور من محاور الرؤية يهتم بحماية الموارد الطبيعية؟",
+    "options": [
+      "الإنسان والمجتمع",
+      "الاقتصاد والتنمية",
+      "البيئة المستدامة",
+      "الحوكمة والأداء المؤسسي"
+    ],
+    "answer": 2,
+    "source": "https://www.oman2040.om/المحاور-والأولويات/"
+  },
+  {
+    "id": 105,
+    "axis": "development",
+    "level": "easy",
+    "question": "أي أولوية وطنية تهتم بتطوير المؤسسات التعليمية والبحث العلمي؟",
+    "options": [
+      "الصحة",
+      "التعليم والتعلم والبحث العلمي والقدرات الوطنية",
+      "التشريع والقضاء والرقابة",
+      "سوق العمل والتشغيل"
+    ],
+    "answer": 1,
+    "source": "https://www.oman2040.om/المحاور-والأولويات/"
+  },
+  {
+    "id": 106,
+    "axis": "development",
+    "level": "easy",
+    "question": "أي قطاع يُعد شريكًا في تحقيق رؤية عُمان 2040 إلى جانب الحكومة؟",
+    "options": [
+      "القطاع الخاص",
+      "القطاع الحكومي وحده",
+      "المؤسسات الأجنبية وحدها",
+      "المؤسسات العسكرية وحدها"
+    ],
+    "answer": 0,
+    "source": "https://www.oman2040.om/الأسئلة-الشائعة/"
+  },
+  {
+    "id": 107,
+    "axis": "development",
+    "level": "easy",
+    "question": "أي من الآتي يمثل مصدرًا للطاقة المتجددة؟",
+    "options": [
+      "الديزل",
+      "الفحم",
+      "الطاقة الشمسية",
+      "الغاز الطبيعي"
+    ],
+    "answer": 2,
+    "source": "https://www.oman2040.om/المحاور-والأولويات/"
+  },
+  {
+    "id": 108,
+    "axis": "development",
+    "level": "easy",
+    "question": "ما الغرض من مؤشرات الأداء في رؤية عُمان 2040؟",
+    "options": [
+      "زيادة عدد التقارير دون قياس",
+      "قياس التقدم نحو المستهدفات",
+      "إلغاء الخطط الخمسية",
+      "الاستغناء عن تقييم المؤسسات"
+    ],
+    "answer": 1,
+    "source": "https://www.oman2040.om/الأسئلة-الشائعة/"
+  },
+  {
+    "id": 109,
+    "axis": "development",
+    "level": "medium",
+    "question": "ما الفترة التي تغطيها رؤية عُمان 2040 بوصفها مرجعًا وطنيًا للتخطيط؟",
+    "options": [
+      "2010–2030",
+      "2020–2035",
+      "2021–2040",
+      "2025–2045"
+    ],
+    "answer": 2,
+    "source": "https://www.oman2040.om/الأسئلة-الشائعة/"
+  },
+  {
+    "id": 110,
+    "axis": "development",
+    "level": "medium",
+    "question": "أي أولوية وطنية تهدف إلى تنويع مصادر الدخل وتعزيز الاستدامة المالية؟",
+    "options": [
+      "الصحة",
+      "التنويع الاقتصادي والاستدامة المالية",
+      "الهوية والتراث",
+      "التشريع والقضاء"
+    ],
+    "answer": 1,
+    "source": "https://www.oman2040.om/المحاور-والأولويات/"
+  },
+  {
+    "id": 111,
+    "axis": "development",
+    "level": "medium",
+    "question": "أي أولوية ترتبط بزيادة مشاركة المؤسسات الخاصة والاستثمارات في الاقتصاد؟",
+    "options": [
+      "الصحة",
+      "القطاع الخاص والاستثمار والتعاون الدولي",
+      "التعليم والتعلم",
+      "البيئة والموارد الطبيعية"
+    ],
+    "answer": 1,
+    "source": "https://www.oman2040.om/المحاور-والأولويات/"
+  },
+  {
+    "id": 112,
+    "axis": "development",
+    "level": "medium",
+    "question": "أي أولوية وطنية تتناول تطوير فرص العمل والتشغيل؟",
+    "options": [
+      "سوق العمل والتشغيل",
+      "المواطنة والهوية",
+      "البيئة والموارد الطبيعية",
+      "التشريع والقضاء"
+    ],
+    "answer": 0,
+    "source": "https://www.oman2040.om/المحاور-والأولويات/"
+  },
+  {
+    "id": 113,
+    "axis": "development",
+    "level": "medium",
+    "question": "أي مشروع ورد ضمن إنجازات أولوية البيئة والموارد الطبيعية؟",
+    "options": [
+      "مدينة الثريا",
+      "محطتا منح 1 ومنح 2 للطاقة الشمسية",
+      "البوابة الإلكترونية قضاء",
+      "الموسوعة العُمانية للناشئة"
+    ],
+    "answer": 1,
+    "source": "https://www.oman2040.om/الجهود-والإنجازات/"
+  },
+  {
+    "id": 114,
+    "axis": "development",
+    "level": "medium",
+    "question": "أي مبادرة وردت ضمن إنجازات أولوية الصحة؟",
+    "options": [
+      "تفعيل العيادات الافتراضية",
+      "إطلاق نظام العنونة الوطني",
+      "إنشاء محكمة الاستثمار والتجارة",
+      "تدشين مدينة الثريا"
+    ],
+    "answer": 0,
+    "source": "https://www.oman2040.om/الجهود-والإنجازات/"
+  },
+  {
+    "id": 115,
+    "axis": "development",
+    "level": "medium",
+    "question": "أي مشروع يرتبط بأولوية تنمية المحافظات والمدن المستدامة؟",
+    "options": [
+      "البوابة الإلكترونية قضاء",
+      "مشروع نظام العنونة الوطني",
+      "مركز عُمان للحياد الصفري",
+      "الموسوعة العُمانية للناشئة"
+    ],
+    "answer": 1,
+    "source": "https://www.oman2040.om/الجهود-والإنجازات/"
+  },
+  {
+    "id": 116,
+    "axis": "development",
+    "level": "medium",
+    "question": "أي من الإنجازات التالية يرتبط بتطوير منظومة القضاء؟",
+    "options": [
+      "إنشاء محكمة الاستثمار والتجارة",
+      "تشغيل محطتي منح للطاقة الشمسية",
+      "تفعيل العيادات الافتراضية",
+      "إنشاء مركز عُمان للحياد الصفري"
+    ],
+    "answer": 0,
+    "source": "https://www.oman2040.om/الجهود-والإنجازات/"
+  },
+  {
+    "id": 117,
+    "axis": "development",
+    "level": "medium",
+    "question": "ما الهدف المباشر من تقديم خدمات حكومية إلكترونية متكاملة؟",
+    "options": [
+      "زيادة المعاملات الورقية",
+      "تسهيل الوصول للخدمات ورفع الكفاءة",
+      "تقليل إتاحة المعلومات",
+      "إلزام المراجعين بالحضور الشخصي"
+    ],
+    "answer": 1,
+    "source": "https://www.oman2040.om/المحاور-والأولويات/"
+  },
+  {
+    "id": 118,
+    "axis": "development",
+    "level": "medium",
+    "question": "أي مبادرة مدرسية تنسجم بصورة أوضح مع أولوية التعليم والبحث العلمي؟",
+    "options": [
+      "تشجيع الطلبة على تنفيذ مشروعات بحثية مبتكرة",
+      "تقليل استخدام المختبرات",
+      "إلغاء الأنشطة العلمية",
+      "الاكتفاء بالحفظ دون تطبيق"
+    ],
+    "answer": 0,
+    "source": "https://www.oman2040.om/المحاور-والأولويات/"
+  },
+  {
+    "id": 119,
+    "axis": "development",
+    "level": "medium",
+    "question": "أي أولوية وطنية تتصل بتحسين العدالة الاجتماعية وشبكات الحماية؟",
+    "options": [
+      "سوق العمل والتشغيل",
+      "الرفاه والحماية الاجتماعية",
+      "البيئة والموارد الطبيعية",
+      "القيادة والإدارة الاقتصادية"
+    ],
+    "answer": 1,
+    "source": "https://www.oman2040.om/المحاور-والأولويات/"
+  },
+  {
+    "id": 120,
+    "axis": "development",
+    "level": "medium",
+    "question": "أي إجراء مؤسسي يتفق مع محور الحوكمة والأداء المؤسسي؟",
+    "options": [
+      "إخفاء نتائج الأداء",
+      "توضيح المسؤوليات وقياس الأداء",
+      "إلغاء إجراءات المتابعة",
+      "غياب المساءلة"
+    ],
+    "answer": 1,
+    "source": "https://www.oman2040.om/المحاور-والأولويات/"
+  },
+  {
+    "id": 121,
+    "axis": "development",
+    "level": "hard",
+    "question": "أي مشروع يحقق بصورة مباشرة هدفين هما الاستدامة البيئية وتنويع مصادر الطاقة؟",
+    "options": [
+      "التوسع في محطات الطاقة الشمسية",
+      "زيادة استخدام الوقود التقليدي فقط",
+      "إيقاف مشروعات الطاقة المتجددة",
+      "الاعتماد على مصدر واحد للطاقة"
+    ],
+    "answer": 0,
+    "source": "https://www.oman2040.om/المحاور-والأولويات/"
+  },
+  {
+    "id": 122,
+    "axis": "development",
+    "level": "hard",
+    "question": "إذا أرادت مؤسسة تعليمية دعم الابتكار والحوكمة معًا، فما الإجراء الأنسب؟",
+    "options": [
+      "تطبيق مشروعات ابتكارية بمؤشرات أداء واضحة ومتابعة دورية",
+      "زيادة الأنشطة دون تقييم",
+      "إلغاء توثيق النتائج",
+      "الاعتماد على القرارات الفردية غير الموثقة"
+    ],
+    "answer": 0,
+    "source": "https://www.oman2040.om/المحاور-والأولويات/"
+  },
+  {
+    "id": 123,
+    "axis": "development",
+    "level": "hard",
+    "question": "أي زوج من الإنجازات ينتمي إلى أولويتين مختلفتين: الصحة والبيئة والموارد الطبيعية، بالترتيب؟",
+    "options": [
+      "العيادات الافتراضية ومحطتا منح للطاقة الشمسية",
+      "نظام العنونة الوطني ومدينة الثريا",
+      "محكمة الاستثمار والتجارة والبوابة قضاء",
+      "الموسوعة العُمانية للناشئة ومجمع السيد طارق الثقافي"
+    ],
+    "answer": 0,
+    "source": "https://www.oman2040.om/الجهود-والإنجازات/"
+  },
+  {
+    "id": 124,
+    "axis": "development",
+    "level": "hard",
+    "question": "إذا ارتفعت الاستثمارات غير النفطية وزادت مساهمتها في الناتج المحلي، فأي أولوية وطنية يُرجّح أن يدعمها ذلك مباشرة؟",
+    "options": [
+      "التنويع الاقتصادي والاستدامة المالية",
+      "الصحة",
+      "المواطنة والهوية",
+      "التشريع والقضاء"
+    ],
+    "answer": 0,
+    "source": "https://www.oman2040.om/المحاور-والأولويات/"
+  },
+  {
+    "id": 125,
+    "axis": "development",
+    "level": "hard",
+    "question": "أي مجموعة من الإجراءات تحقق تكاملًا بين أولويات التعليم وسوق العمل والقطاع الخاص؟",
+    "options": [
+      "تطوير مهارات الطلبة وربط التدريب باحتياجات الوظائف وإشراك الشركات",
+      "زيادة المحتوى النظري دون تدريب",
+      "تقليل التعاون مع الشركات",
+      "فصل المناهج عن المهارات المهنية"
+    ],
+    "answer": 0,
+    "source": "https://www.oman2040.om/المحاور-والأولويات/"
+  },
+  {
+    "id": 126,
+    "axis": "landmarks",
+    "level": "easy",
+    "question": "أي مدينة عُمانية تضم قلعة جبرين ضمن نطاق ولايتها؟",
+    "options": [
+      "بهلا",
+      "صور",
+      "خصب",
+      "صحار"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/en/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 127,
+    "axis": "landmarks",
+    "level": "easy",
+    "question": "في أي ولاية تقع قلعة جبرين؟",
+    "options": [
+      "الرستاق",
+      "بهلا",
+      "صحار",
+      "إبراء"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 128,
+    "axis": "landmarks",
+    "level": "easy",
+    "question": "أي مدينة عُمانية اشتهرت تاريخيًا بمينائها التجاري في شمال الباطنة؟",
+    "options": [
+      "عبري",
+      "نزوى",
+      "صحار",
+      "هيما"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/en/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 129,
+    "axis": "landmarks",
+    "level": "easy",
+    "question": "في أي محافظة تقع قلعة الرستاق؟",
+    "options": [
+      "الداخلية",
+      "جنوب الباطنة",
+      "الظاهرة",
+      "مسندم"
+    ],
+    "answer": 1,
+    "source": "https://www.fm.gov.om/en/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 130,
+    "axis": "landmarks",
+    "level": "easy",
+    "question": "أي نوع من الأدلة يدعم دراسة الاستيطان في بات والخطم والعين خلال العصر البرونزي؟",
+    "options": [
+      "المدافن والمستوطنات والأبراج الأثرية",
+      "السجلات التجارية للموانئ في العصور الوسطى",
+      "التحصينات البرتغالية على الساحل",
+      "الوثائق الإدارية من القرن العشرين"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/list/434/"
+  },
+  {
+    "id": 131,
+    "axis": "landmarks",
+    "level": "easy",
+    "question": "أي مدينة عُمانية اشتهرت بصناعة السفن التقليدية؟",
+    "options": [
+      "نزوى",
+      "بهلا",
+      "صور",
+      "عبري"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/en/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 132,
+    "axis": "landmarks",
+    "level": "easy",
+    "question": "ما الفارق الرئيسي بين وظيفة قلعة بهلا ووظيفة أنظمة الأفلاج؟",
+    "options": [
+      "بهلا نظام ري والأفلاج تحصينات",
+      "بهلا تحصينات تاريخية والأفلاج نظم لتوزيع المياه",
+      "كلاهما موانئ بحرية",
+      "كلاهما فنون أدائية"
+    ],
+    "answer": 1,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 133,
+    "axis": "landmarks",
+    "level": "medium",
+    "question": "من الإمام الذي ارتبط ببناء الحصن الدائري في نزوى؟",
+    "options": [
+      "سلطان بن سيف اليعربي",
+      "أحمد بن سعيد",
+      "سعيد بن سلطان",
+      "قابوس بن سعيد"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 134,
+    "axis": "landmarks",
+    "level": "medium",
+    "question": "أي وظيفة تاريخية أدتها قلعة نزوى إلى جانب الدفاع؟",
+    "options": [
+      "مركز للحكم والإدارة",
+      "مطار تجاري",
+      "مركز لصناعة السفن",
+      "محطة قطارات"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 135,
+    "axis": "landmarks",
+    "level": "medium",
+    "question": "في أي محافظة تقع المواقع الأثرية بات والخطم والعين؟",
+    "options": [
+      "مسقط",
+      "الداخلية",
+      "الظاهرة",
+      "ظفار"
+    ],
+    "answer": 2,
+    "source": "https://whc.unesco.org/en/list/434/"
+  },
+  {
+    "id": 136,
+    "axis": "landmarks",
+    "level": "medium",
+    "question": "ما الاستنتاج الذي تدعمه المواقع الأثرية في بات والخطم والعين؟",
+    "options": [
+      "وجود أنماط استيطان ودفن في الألفية الثالثة قبل الميلاد",
+      "نشوء ميناء تجاري في القرون الوسطى",
+      "انتشار التحصينات الساحلية في القرن السابع عشر",
+      "قيام منشآت صناعية حديثة في القرن العشرين"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/list/434/"
+  },
+  {
+    "id": 137,
+    "axis": "landmarks",
+    "level": "medium",
+    "question": "أي موقع تاريخي في ظفار كان جزءًا من تجارة اللبان؟",
+    "options": [
+      "البليد",
+      "قلعة نزوى",
+      "حصن الحزم",
+      "قلعة صحار"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/list/1010/"
+  },
+  {
+    "id": 138,
+    "axis": "landmarks",
+    "level": "medium",
+    "question": "ما اسم الموقع الأثري المعروف باسم سمهرم؟",
+    "options": [
+      "خور روري",
+      "بات",
+      "قلهات",
+      "جبرين"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/list/1010/"
+  },
+  {
+    "id": 139,
+    "axis": "landmarks",
+    "level": "medium",
+    "question": "أي مدينة كانت ميناء تجاريًا مهمًا في القرون الوسطى شمال صور؟",
+    "options": [
+      "قلهات",
+      "بهلا",
+      "نزوى",
+      "عبري"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/list/1537/"
+  },
+  {
+    "id": 140,
+    "axis": "landmarks",
+    "level": "medium",
+    "question": "ما المعلم الأثري الشهير في مدينة قلهات القديمة؟",
+    "options": [
+      "ضريح بيبي مريم",
+      "قلعة جبرين",
+      "حصن الحزم",
+      "قلعة الرستاق"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/list/1537/"
+  },
+  {
+    "id": 141,
+    "axis": "landmarks",
+    "level": "medium",
+    "question": "أي مدينة ارتبطت تاريخيًا بتجارة النحاس والملاحة في شمال الباطنة؟",
+    "options": [
+      "صحار",
+      "هيما",
+      "بهلا",
+      "منح"
+    ],
+    "answer": 0,
+    "source": "https://www.fm.gov.om/en/about-oman/state/history/"
+  },
+  {
+    "id": 142,
+    "axis": "landmarks",
+    "level": "medium",
+    "question": "ما العلاقة الصحيحة بين خور روري والبليد في تاريخ ظفار؟",
+    "options": [
+      "كلاهما من مكونات موقع أرض اللبان المرتبط بالتجارة التاريخية",
+      "كلاهما من مدافن العصر البرونزي في الظاهرة",
+      "كلاهما من حصون نزوى",
+      "كلاهما من الأفلاج المدرجة عام 2006"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/list/1010/"
+  },
+  {
+    "id": 143,
+    "axis": "landmarks",
+    "level": "medium",
+    "question": "في أي محافظة تقع قلعة الحزم؟",
+    "options": [
+      "الداخلية",
+      "شمال الباطنة",
+      "جنوب الباطنة",
+      "الظاهرة"
+    ],
+    "answer": 2,
+    "source": "https://www.fm.gov.om/en/about-oman/state/oman-by-region/"
+  },
+  {
+    "id": 144,
+    "axis": "landmarks",
+    "level": "medium",
+    "question": "أي موقع مدرج لدى اليونسكو يرتبط بتاريخ الموانئ العُمانية في العصور الوسطى؟",
+    "options": [
+      "قلهات",
+      "بات",
+      "بهلا",
+      "الأفلاج"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/list/1537/"
+  },
+  {
+    "id": 145,
+    "axis": "landmarks",
+    "level": "medium",
+    "question": "أي موقع أثري في ظفار يرتبط ببقايا ميناء تجاري تاريخي؟",
+    "options": [
+      "خور روري",
+      "جبرين",
+      "بات",
+      "نزوى"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/list/1010/"
+  },
+  {
+    "id": 146,
+    "axis": "landmarks",
+    "level": "hard",
+    "question": "أي مقارنة صحيحة بين بات وقلهات؟",
+    "options": [
+      "بات موقع من العصر البرونزي وقلهات ميناء ازدهر في العصور الوسطى",
+      "بات ميناء حديث وقلهات موقع برونزي",
+      "الموقعان من القرن العشرين",
+      "الموقعان في ظفار"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  },
+  {
+    "id": 147,
+    "axis": "landmarks",
+    "level": "hard",
+    "question": "ما الدليل على ارتباط عُمان القديمة بالتجارة مع بلاد الرافدين؟",
+    "options": [
+      "آثار إنتاج النحاس وتبادله",
+      "شبكة السكك الحديدية القديمة",
+      "المصانع الحديثة",
+      "موانئ الطائرات"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/list/434/"
+  },
+  {
+    "id": 148,
+    "axis": "landmarks",
+    "level": "hard",
+    "question": "ما العامل الجغرافي الأبرز في ازدهار قلهات ميناءً تجاريًا تاريخيًا؟",
+    "options": [
+      "وقوعها على طرق الملاحة والتجارة البحرية",
+      "وقوعها على طريق قوافل داخلية بعيد عن الساحل",
+      "اتصالها بمجرى نهري دائم يصل إلى الهند",
+      "قربها من مضيق هرمز مباشرة"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/list/1537/"
+  },
+  {
+    "id": 149,
+    "axis": "landmarks",
+    "level": "hard",
+    "question": "أي مجموعة تضم مواقع ترتبط بتجارة اللبان في ظفار؟",
+    "options": [
+      "وادي دوكة وخور روري والبليد وشصر",
+      "بات والخطم والعين وبهلا",
+      "نزوى والرستاق وصحار",
+      "قلهات وبهلا وجبرين"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/list/1010/"
+  },
+  {
+    "id": 150,
+    "axis": "landmarks",
+    "level": "hard",
+    "question": "أي عبارة تفسر اختلاف القيمة التراثية لقلعة بهلا ومدينة قلهات؟",
+    "options": [
+      "بهلا تمثل عمارة تحصينية وقلهات ميناء تجاريًا تاريخيًا",
+      "الموقعان موانئ حديثة",
+      "بهلا موقع لبان وقلهات فلج",
+      "الموقعان من العصر البرونزي"
+    ],
+    "answer": 0,
+    "source": "https://whc.unesco.org/en/statesparties/om/"
+  }
+]

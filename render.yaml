@@ -2,7 +2,7 @@ services:
   - type: web
     name: oman-majd-quiz
     runtime: python
-    plan: starter
+    plan: free
     region: frankfurt
     buildCommand: pip install -r requirements.txt
     startCommand: python server.py

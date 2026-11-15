@@ -109,7 +109,7 @@ class Handler(BaseHTTPRequestHandler):
      return self.respond({'status':status(c),'rows':[dict(r) for r in rows],'total_questions':len(Q)})
     if path=='/api/admin/export':
      rows=c.execute('SELECT token,name,org,score,elapsed,started,finished FROM participants ORDER BY score DESC,elapsed ASC').fetchall()
-     buf=io.StringIO();writer=csv.writer(buf);writer.writerow(['الرمز','الاسم','جهة العمل','الدرجة','الوقت بالثواني','بداية المشاركة','نهاية المشاركة']);writer.writerows([list(r) for r in rows]);raw=('\ufeff'+buf.getvalue()).encode('utf8')
+     buf=io.StringIO();writer=csv.writer(buf);writer.writerow(['الرمز','الاسم','جهة العمل','الدرجة','الوقت بالثواني','بداية المشاركة','نهاية المشاركة']);writer.writerows([[r['token'],r['name'],r['org'],r['score'],r['elapsed'],r['started'],r['finished']] for r in rows]);raw=('\ufeff'+buf.getvalue()).encode('utf8')
      self.send_response(200);self.send_header('Content-Type','text/csv; charset=utf-8');self.send_header('Content-Disposition','attachment; filename="oman_majd_results.csv"');self.send_header('Content-Length',str(len(raw)));self.end_headers();self.wfile.write(raw);return
   self.error('غير موجود',404)
  def do_POST(self):

@@ -1,5 +1,5 @@
 """Dependency-free Oman Majd quiz server. Python 3.10+."""
-import os,json,sqlite3,secrets,time,csv,io,hmac,mimetypes,threading,hashlib
+import os,json,sqlite3,secrets,time,csv,io,hmac,mimetypes,threading,hashlib,unicodedata,datetime
 from psycopg import connect as pgconnect
 from psycopg.rows import dict_row
 from pathlib import Path
@@ -12,8 +12,6 @@ ADMIN=os.getenv('ADMIN_PASSWORD','')
 Q={x['id']:x for x in json.loads((ROOT/'questions.json').read_text(encoding='utf8'))}
 QUOTAS={'history':(2,4,2),'geography':(2,3,1),'heritage':(2,3,1),'development':(2,2,1),'landmarks':(1,3,1)}
 LEVELS=('easy','medium','hard')
-def identity(name,org):
- return hashlib.sha256((' '.join(name.split()).casefold()+'\x00'+' '.join(org.split()).casefold()).encode('utf8')).hexdigest()
 class PGConnection:
  def __init__(self):
   self.c=pgconnect(DATABASE_URL,row_factory=dict_row)
@@ -45,15 +43,24 @@ def init():
      deadline DOUBLE PRECISION,submitted TEXT DEFAULT '[]')""")
    c.execute("INSERT INTO settings(k,v) VALUES('status','closed') ON CONFLICT(k) DO NOTHING")
    c.execute('ALTER TABLE participants ADD COLUMN IF NOT EXISTS identity_key TEXT')
-   c.execute('CREATE UNIQUE INDEX IF NOT EXISTS participant_identity_unique ON participants(identity_key)')
+   c.execute('ALTER TABLE participants ADD COLUMN IF NOT EXISTS is_test INTEGER NOT NULL DEFAULT 0')
+   c.execute('CREATE UNIQUE INDEX IF NOT EXISTS participants_identity_unique ON participants(identity_key)')
  else:
   with conn() as c:
    c.executescript("""CREATE TABLE IF NOT EXISTS settings(k TEXT PRIMARY KEY,v TEXT NOT NULL);
    CREATE TABLE IF NOT EXISTS participants(token TEXT PRIMARY KEY,name TEXT,org TEXT,session TEXT UNIQUE,started REAL,finished REAL,score INTEGER DEFAULT 0,elapsed REAL,plan TEXT,pos INTEGER DEFAULT 0,deadline REAL,submitted TEXT DEFAULT '[]');""")
    c.execute("INSERT OR IGNORE INTO settings VALUES('status','closed')")
-   if 'identity_key' not in [r[1] for r in c.execute('PRAGMA table_info(participants)').fetchall()]:
-    c.execute('ALTER TABLE participants ADD COLUMN identity_key TEXT')
-   c.execute('CREATE UNIQUE INDEX IF NOT EXISTS participant_identity_unique ON participants(identity_key)')
+   cols={r['name'] for r in c.execute('PRAGMA table_info(participants)').fetchall()}
+   if 'identity_key' not in cols:c.execute('ALTER TABLE participants ADD COLUMN identity_key TEXT')
+   if 'is_test' not in cols:c.execute('ALTER TABLE participants ADD COLUMN is_test INTEGER NOT NULL DEFAULT 0')
+   c.execute('CREATE UNIQUE INDEX IF NOT EXISTS participants_identity_unique ON participants(identity_key)')
+def identity_key(name,org):
+ def normalize(v):
+  v=unicodedata.normalize('NFKC',v).strip().casefold()
+  return ' '.join(v.split())
+ return hashlib.sha256((normalize(name)+'\x00'+normalize(org)).encode('utf8')).hexdigest()
+def date_str(v):
+ return datetime.datetime.fromtimestamp(v,datetime.timezone(datetime.timedelta(hours=4))).strftime('%Y-%m-%d %H:%M:%S') if v else ''
 def status(c):return c.execute("SELECT v FROM settings WHERE k='status'").fetchone()['v']
 def current(c,session):return c.execute('SELECT * FROM participants WHERE session=?' + (' FOR UPDATE' if DATABASE_URL else ''),(session,)).fetchone() if session else None
 def question(row):
@@ -106,17 +113,17 @@ class Handler(BaseHTTPRequestHandler):
   if path=='/api/leaderboard':
    with conn() as c:
     if status(c)!='closed':return self.error('يُعلن ترتيب الفائزين بعد إغلاق المسابقة',403)
-    rows=c.execute('SELECT name,org,score,elapsed FROM participants WHERE finished IS NOT NULL ORDER BY score DESC,elapsed ASC,name ASC LIMIT 100').fetchall()
+    rows=c.execute('SELECT name,org,score,elapsed FROM participants WHERE finished IS NOT NULL AND is_test=0 ORDER BY score DESC,elapsed ASC,name ASC LIMIT 100').fetchall()
     return self.respond({'rows':[dict(r) for r in rows]})
   if path.startswith('/api/admin/'):
    if not self.admin():return self.error('كلمة مرور الإدارة غير صحيحة',401)
    with conn() as c:
     if path=='/api/admin/state':
-     rows=c.execute('SELECT token,name,org,started,finished,score,elapsed FROM participants ORDER BY score DESC,elapsed ASC').fetchall()
+     rows=c.execute('SELECT token,name,org,started,finished,score,elapsed,is_test FROM participants ORDER BY score DESC,elapsed ASC').fetchall()
      return self.respond({'status':status(c),'rows':[dict(r) for r in rows],'total_questions':len(Q)})
     if path=='/api/admin/export':
-     rows=c.execute('SELECT token,name,org,score,elapsed,started,finished FROM participants ORDER BY score DESC,elapsed ASC').fetchall()
-     buf=io.StringIO();writer=csv.writer(buf);writer.writerow(['الرمز','الاسم','جهة العمل','الدرجة','الوقت بالثواني','بداية المشاركة','نهاية المشاركة']);writer.writerows([[r['token'],r['name'],r['org'],r['score'],r['elapsed'],r['started'],r['finished']] for r in rows]);raw=('\ufeff'+buf.getvalue()).encode('utf8')
+     rows=c.execute('SELECT token,name,org,score,elapsed,started,finished,is_test FROM participants ORDER BY score DESC,elapsed ASC').fetchall()
+     buf=io.StringIO();writer=csv.writer(buf);writer.writerow(['المعرف الداخلي','الاسم','جهة العمل','الدرجة','الوقت بالثواني','بداية المشاركة (عُمان)','نهاية المشاركة (عُمان)','تجريبي']);writer.writerows([[r['token'],r['name'],r['org'],r['score'],r['elapsed'],date_str(r['started']),date_str(r['finished']),r['is_test']] for r in rows]);raw=('\ufeff'+buf.getvalue()).encode('utf8')
      self.send_response(200);self.send_header('Content-Type','text/csv; charset=utf-8');self.send_header('Content-Disposition','attachment; filename="oman_majd_results.csv"');self.send_header('Content-Length',str(len(raw)));self.end_headers();self.wfile.write(raw);return
   self.error('غير موجود',404)
  def do_POST(self):
@@ -128,29 +135,20 @@ class Handler(BaseHTTPRequestHandler):
     if v not in ('open','closed'):return self.error('حالة غير صحيحة')
     with conn() as c:c.execute("UPDATE settings SET v=? WHERE k='status'",(v,))
     return self.respond({'status':v})
-   if path=='/api/admin/tokens':
-    try:n=int(data.get('count',0))
-    except (ValueError,TypeError):return self.error('عدد غير صحيح')
-    if not 1<=n<=500:return self.error('العدد بين 1 و500')
-    created=[];alphabet='ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+   if path=='/api/admin/test':
+    token=str(data.get('token','')).strip()
+    value=1 if data.get('is_test') else 0
     with conn() as c:
-     for _ in range(n):
-      while True:
-       token=''.join(secrets.choice(alphabet) for _ in range(10))
-       if not c.execute('SELECT 1 FROM participants WHERE token=?',(token,)).fetchone():break
-      c.execute('INSERT INTO participants(token) VALUES(?)',(token,));created.append(token)
-    return self.respond({'tokens':created})
+     c.execute('UPDATE participants SET is_test=? WHERE token=?',(value,token))
+    return self.respond({'ok':True})
   if path=='/api/start':
-   name=' '.join(str(data.get('name','')).split());org=' '.join(str(data.get('org','')).split())
-   if not (2<=len(name)<=100 and 2<=len(org)<=120):return self.error('أدخل الاسم وجهة العمل بشكل صحيح')
-   key=identity(name,org)
+   name=str(data.get('name','')).strip();org=str(data.get('org','')).strip()
+   if not (2<=len(name)<=100 and 2<=len(org)<=120):return self.error('أدخل الاسم الكامل وجهة العمل بشكل صحيح')
+   identity=identity_key(name,org)
    with conn() as c:
     c.execute('BEGIN IMMEDIATE')
     if status(c)!='open':return self.error('المسابقة مغلقة حاليًا',403)
-    # Reject a previous participation even if created before this migration.
-    old=c.execute('SELECT name,org FROM participants WHERE started IS NOT NULL').fetchall()
-    if any(identity(r['name'] or '',r['org'] or '')==key for r in old):
-     return self.error('سبق تسجيل مشاركة بهذا الاسم وجهة العمل',409)
+    if c.execute('SELECT 1 FROM participants WHERE identity_key=?',(identity,)).fetchone():return self.error('سُجلت مشاركة بهذا الاسم وجهة العمل مسبقًا',409)
     plan=[];rng=secrets.SystemRandom()
     for axis,counts in QUOTAS.items():
      for level,n in zip(LEVELS,counts):
@@ -158,15 +156,11 @@ class Handler(BaseHTTPRequestHandler):
       for q in rng.sample(pool,n):
        order=list(range(4));rng.shuffle(order);plan.append({'id':q['id'],'order':order})
     rng.shuffle(plan);session=secrets.token_urlsafe(32);now=time.time()
-    # Token is an internal database identifier, never requested from a participant.
     token=secrets.token_urlsafe(24)
     try:
-     c.execute('INSERT INTO participants(token,name,org,session,started,plan,deadline,identity_key) VALUES(?,?,?,?,?,?,?,?)',
-      (token,name,org,session,now,json.dumps(plan),now+30,key))
-    except Exception as exc:
-     # A concurrent registration may have inserted the same identity.
-     if 'unique' in str(exc).lower() or 'duplicate' in str(exc).lower():
-      return self.error('سبق تسجيل مشاركة بهذا الاسم وجهة العمل',409)
+     c.execute('INSERT INTO participants(token,name,org,identity_key,session,started,plan,deadline) VALUES(?,?,?,?,?,?,?,?)',(token,name,org,identity,session,now,json.dumps(plan),now+30))
+    except (sqlite3.IntegrityError,Exception) as exc:
+     if 'unique' in str(exc).lower() or 'duplicate' in str(exc).lower():return self.error('سُجلت مشاركة بهذا الاسم وجهة العمل مسبقًا',409)
      raise
     row=c.execute('SELECT * FROM participants WHERE token=?',(token,)).fetchone()
     return self.respond({'session':session,'question':question(row)})

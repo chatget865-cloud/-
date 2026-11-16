@@ -12,10 +12,15 @@ api('/api/status').then(d=>{$('state').textContent=d.status==='open'?'المسا
 
 const soundButton=$('soundToggle');if(soundButton){soundButton.onclick=()=>{const on=window.omanSound?.toggle();soundButton.textContent=on?'🔊 المؤثرات الصوتية: تعمل':'🔇 المؤثرات الصوتية: متوقفة';soundButton.setAttribute('aria-pressed',String(!!on));if(on)window.omanSound?.play('select')};}
 
-// Certificate printing is bound from an external script to respect the site CSP.
-const printCertificateButton = document.getElementById("printCertificate");
+// Certificate printing: use an external event handler (compatible with CSP).
+const printCertificateButton = document.getElementById('printCertificate');
 if (printCertificateButton) {
-  printCertificateButton.addEventListener("click", () => {
+  printCertificateButton.addEventListener('click', () => {
+    const certificate = document.getElementById('cert');
+    if (!certificate || certificate.classList.contains('hidden')) {
+      msg('افتح شهادة المشاركة أولًا ثم اختر الطباعة.');
+      return;
+    }
     window.print();
   });
 }

@@ -23,3 +23,30 @@ body{background-color:#f8f4ed;background-image:linear-gradient(180deg,rgba(255,2
 .cert-art{font-size:42px;color:var(--gold)}.cert-divider{color:#c19c54;font-size:14px;letter-spacing:3px;margin:12px 0}.certificate h2{font-size:clamp(30px,5vw,46px);margin:18px 0;color:var(--red)}.certificate h1{font-size:clamp(29px,5vw,45px);border-bottom:1px solid #d6bb80;display:inline-block;min-width:50%;padding:8px 15px 13px}.cert-caption{font-weight:600}.cert-points{display:inline-block;border:1px solid #dfc992;padding:8px 26px;border-radius:30px;background:#fff8e7}.cert-closing{color:#6c6d60;font-size:13px}
 @media(max-width:650px){body{background-size:auto 100vh}.certificate{padding:24px 15px}.cert-divider{font-size:10px;letter-spacing:1px}}
 @media print{@page{size:A4 portrait;margin:12mm}body{background:white!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.certificate{width:100%;min-height:245mm;padding:32mm 14mm 15mm!important;box-shadow:none!important;border:7px double #b99b5c!important}.certificate .creator-credit{display:flex!important}.certificate button{display:none!important}.cert-art,.cert-divider{display:block!important}}
+
+/* Certificate-only A4 print layout: no registration page, no extra blank page. */
+@media print {
+  @page { size: A4 portrait; margin: 0; }
+  html, body { width: 210mm !important; height: 297mm !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; overflow: visible !important; background: #fff !important; }
+  body::before, body::after, .top, footer, .no-print, #message, #welcome, #quiz, #done { display: none !important; }
+  main.container { display: block !important; position: static !important; width: 210mm !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+  #cert.certificate {
+    display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: space-evenly !important;
+    position: relative !important; width: 194mm !important; height: 281mm !important; min-height: 0 !important; max-height: 281mm !important;
+    margin: 8mm auto !important; padding: 13mm 13mm !important; overflow: hidden !important;
+    box-sizing: border-box !important; border: 5px double #b99b5c !important; outline: none !important; border-radius: 8px !important; box-shadow: none !important;
+    background: #fffdf8 !important; break-inside: avoid !important; page-break-inside: avoid !important;
+    -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important;
+  }
+  #cert.certificate > * { flex-shrink: 0 !important; max-width: 100% !important; }
+  #cert.certificate p { margin: 2mm 0 !important; line-height: 1.45 !important; font-size: 12pt !important; }
+  #cert.certificate .cert-top { font-size: 20pt !important; }
+  #cert.certificate .cert-art { font-size: 22pt !important; }
+  #cert.certificate .cert-divider { margin: 1mm 0 !important; font-size: 10pt !important; }
+  #cert.certificate h2 { margin: 3mm 0 !important; font-size: 27pt !important; }
+  #cert.certificate h1 { margin: 3mm 0 !important; padding: 2mm 5mm !important; font-size: 27pt !important; min-height: 12mm !important; }
+  #cert.certificate h3 { margin: 2mm 0 !important; font-size: 15pt !important; }
+  #cert.certificate .cert-points { margin: 2mm 0 !important; padding: 2mm 7mm !important; }
+  #cert.certificate .creator-credit { display: flex !important; margin: 3mm auto 0 !important; padding: 3mm 6mm !important; min-height: 20mm !important; }
+  #cert.certificate .creator-credit::before { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}

@@ -13,9 +13,30 @@
  function play(name){if(!enabled)return;
   if(name==='select')tone(560,.09);
   else if(name==='submit'){tone(440,.09);tone(660,.14,.09)}
+  else if(name==='timer-tick')tone(720,.075,0,'sine',.026);
   else if(name==='timeout'){tone(280,.20,0,'triangle',.045)}
   else if(name==='finish'){tone(392,.17);tone(494,.17,.14);tone(587,.18,.28);tone(784,.35,.44)}
   else if(name==='certificate'){tone(660,.16);tone(880,.23,.15)}
  }
  window.omanSound={play,toggle(){enabled=!enabled;localStorage.setItem('omanMajdSound',enabled?'on':'off');return enabled}};
+})();
+
+// Gentle once-per-second countdown cue, only during the last ten seconds.
+// Observe the existing timer UI: no changes to app.js or the certificate-print fix.
+(function(){
+ const timer=document.getElementById('timer');
+ const quiz=document.getElementById('quiz');
+ const counter=document.getElementById('counter');
+ if(!timer||!quiz)return;
+ let lastKey='';
+ const observe=()=>{
+  if(quiz.classList.contains('hidden'))return;
+  const seconds=Number(timer.textContent.trim());
+  if(!Number.isInteger(seconds)||seconds<1||seconds>10)return;
+  const key=(counter?.textContent||'')+':'+seconds;
+  if(key===lastKey)return;
+  lastKey=key;
+  window.omanSound?.play('timer-tick');
+ };
+ new MutationObserver(observe).observe(timer,{childList:true,characterData:true,subtree:true});
 })();

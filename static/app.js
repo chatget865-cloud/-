@@ -11,3 +11,11 @@ $('certificate').onclick=()=>{if(!result)return;window.omanSound?.play('certific
 api('/api/status').then(d=>{$('state').textContent=d.status==='open'?'المسابقة متاحة الآن':'المسابقة مغلقة حاليًا'}).catch(()=>{});if(session)resume().catch(()=>{localStorage.removeItem('omanMajdSession');session=null});
 
 const soundButton=$('soundToggle');if(soundButton){soundButton.onclick=()=>{const on=window.omanSound?.toggle();soundButton.textContent=on?'🔊 المؤثرات الصوتية: تعمل':'🔇 المؤثرات الصوتية: متوقفة';soundButton.setAttribute('aria-pressed',String(!!on));if(on)window.omanSound?.play('select')};}
+
+// Certificate printing is bound from an external script to respect the site CSP.
+const printCertificateButton = document.getElementById("printCertificate");
+if (printCertificateButton) {
+  printCertificateButton.addEventListener("click", () => {
+    window.print();
+  });
+}

@@ -143,12 +143,13 @@ class Handler(BaseHTTPRequestHandler):
     return self.respond({'ok':True})
   if path=='/api/start':
    name=str(data.get('name','')).strip();org=str(data.get('org','')).strip()
-   if not (2<=len(name)<=100 and 2<=len(org)<=120):return self.error('أدخل الاسم الكامل وجهة العمل بشكل صحيح')
+   if not (2<=len(name)<=100):return self.error('أدخل الاسم الكامل بشكل صحيح')
+   if org and not (2<=len(org)<=120):return self.error('جهة العمل يجب أن تحتوي على حرفين على الأقل أو تُترك فارغة')
    identity=identity_key(name,org)
    with conn() as c:
     c.execute('BEGIN IMMEDIATE')
     if status(c)!='open':return self.error('المسابقة مغلقة حاليًا',403)
-    if c.execute('SELECT 1 FROM participants WHERE identity_key=?',(identity,)).fetchone():return self.error('سُجلت مشاركة بهذا الاسم وجهة العمل مسبقًا',409)
+    if c.execute('SELECT 1 FROM participants WHERE identity_key=?',(identity,)).fetchone():return self.error('سُجلت مشاركة بهذا الاسم والجهة مسبقًا',409)
     plan=[];rng=secrets.SystemRandom()
     for axis,counts in QUOTAS.items():
      for level,n in zip(LEVELS,counts):
@@ -160,7 +161,7 @@ class Handler(BaseHTTPRequestHandler):
     try:
      c.execute('INSERT INTO participants(token,name,org,identity_key,session,started,plan,deadline) VALUES(?,?,?,?,?,?,?,?)',(token,name,org,identity,session,now,json.dumps(plan),now+30))
     except (sqlite3.IntegrityError,Exception) as exc:
-     if 'unique' in str(exc).lower() or 'duplicate' in str(exc).lower():return self.error('سُجلت مشاركة بهذا الاسم وجهة العمل مسبقًا',409)
+     if 'unique' in str(exc).lower() or 'duplicate' in str(exc).lower():return self.error('سُجلت مشاركة بهذا الاسم والجهة مسبقًا',409)
      raise
     row=c.execute('SELECT * FROM participants WHERE token=?',(token,)).fetchone()
     return self.respond({'session':session,'question':question(row)})

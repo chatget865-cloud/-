@@ -55,29 +55,25 @@ body{background-color:#f8f2e8}
 /* Certificate A4 layout and admin are intentionally untouched. */
 @media print{.om-axes,.om-axis-title{display:none!important}}
 
-/* Approved visual direction — scenic Oman, full-size interactive content. */
-@media screen and (min-width:900px){
- body{background-image:url('/static/scene-left.webp'),url('/static/scene-right.webp'),linear-gradient(125deg,#f7e8d4,#fff9ee 42%,#e8f3ef 80%,#f4e2ca)!important;background-position:left center,right center,center!important;background-size:max(18vw,240px) 100vh,max(18vw,240px) 100vh,cover!important;background-repeat:no-repeat!important;background-attachment:fixed!important}
- body::before{background:linear-gradient(90deg,rgba(255,249,239,.02),rgba(255,250,240,.13) 20%,rgba(255,250,240,.05) 80%,rgba(255,249,239,.02))!important}
- .container{width:min(calc(100% - 32px),1120px)!important;margin:10px auto 28px!important}
- #welcome{padding:15px clamp(22px,3vw,45px) 20px!important;border:2px solid #d9a653!important;border-radius:44px!important;box-shadow:0 12px 35px #6a411e27!important}
- #welcome .eyebrow:before{height:30px!important;margin:0 auto 1px!important;background:none!important}
+/* Clean scenic edges: cropped imagery contains NO duplicated interface text. */
+@media screen and (min-width:1100px){
+ body{background-image:url('/static/scene-left-clean.webp'),url('/static/scene-right-clean.webp'),linear-gradient(115deg,#fff5e8,#fffaf2 55%,#eaf3ee)!important;
+ background-position:left center,right center,center!important;
+ background-size:clamp(185px,18vw,310px) 100vh,clamp(185px,18vw,310px) 100vh,cover!important;
+ background-repeat:no-repeat!important;background-attachment:fixed!important}
+ body::before{background:none!important}
+ .container{width:min(calc(100% - 34px),1080px)!important;margin:12px auto 32px!important}
+ .top{max-width:1080px!important}
+ #welcome{padding:22px clamp(18px,3.5vw,48px) 26px!important;border:2px solid #d4aa69!important;border-radius:30px!important}
+ #welcome .eyebrow:before{display:none!important}
  #welcome .hero-crown{display:none!important}
- #welcome h1{font-size:clamp(66px,6.7vw,112px)!important;margin:3px auto 0!important;letter-spacing:-1px!important}
- #welcome .lead{margin:7px auto 8px!important;line-height:1.4!important}
- #welcome #welcomeMusicToggle{margin:2px auto!important;padding:7px 24px!important}
- #welcome .om-axis-title{margin:8px auto 8px!important;font-size:19px!important}
- #welcome .om-axes{margin-bottom:12px!important}
- #welcome .om-axis{min-height:90px!important;background:linear-gradient(#fffdf7,#f5e5ca)!important;border:2px solid #d8ac62!important;box-shadow:0 5px 10px #8053231e!important}
- #welcome .stats{margin-bottom:11px!important}
- #welcome .stats>div{padding:9px!important}
- #welcome .form-heading{margin:6px auto!important}
- #welcome .form-heading span:first-child{background:#125b3f;color:#fff;border:1px solid #c9a35b;border-radius:30px;padding:5px 38px}
- #welcome .form{background:linear-gradient(180deg,#fff8ed,#ffefd9);border:1px solid #d9b67b;border-radius:26px;padding:12px 20px;gap:8px 20px}
- #welcome .form input{height:44px!important;border-radius:22px!important}
- #welcome .form .primary{border-radius:25px!important;max-width:420px!important;font-size:21px!important;padding:10px!important}
- #welcome .hint{margin:9px auto 0!important}
+ #welcome .form{border:1px solid #dfc69d;border-radius:22px;padding:14px 20px;background:#fff7e8}
+ #welcome .form-heading span:first-child{background:#185a42;color:#fff;padding:6px 30px;border-radius:30px}
 }
-@media screen and (max-width:899px){body{background-image:linear-gradient(#fff8edbb,#fff8eddd),url('/static/oman-heritage.png')!important;background-size:cover!important;background-position:center top!important}#welcome .eyebrow:before{height:20px!important;background:none!important}#welcome{border:2px solid #d7ad65!important}#welcome .form-heading span:first-child{background:#165a3e;color:white;border-radius:25px;padding:5px 20px}}
-@media screen{#welcome .stats>div{border-color:#d7ae6b!important}#welcome .om-axis-title{color:#9d243b!important}#welcome .form .primary{background:linear-gradient(130deg,#9d1732,#c32443)!important;border:2px solid #d8ad61!important}#welcome .om-axis .om-icon{font-size:30px!important}}
+@media screen and (min-width:780px) and (max-width:1099px){
+ body{background-image:linear-gradient(120deg,#fff5e8,#fffaf2 55%,#eaf3ee)!important}
+}
+@media screen and (max-width:779px){
+ body{background-image:linear-gradient(180deg,#fff7ec,#f7eee1)!important;background-attachment:scroll!important}
+}
 @media print{body{background:white!important}}

@@ -1,9 +1,9 @@
 /* =====================================================================
-   عُمان المجد — الواجهة والشهادة (نسخة 12: الواجهة وفق المرجع الأخير، الشهادة دون تغيير)
+   عُمان المجد — الواجهة والشهادة (نسخة 14: الشهادة وفق المرجع الأخير بمقاس A4 أفقي)
    ملف واحد يحل محل كل الطبقات السابقة؛ قواعد الشهادة القديمة حُذفت من style.css.
    * الواجهة: كل عنصر موضوع بإحداثيات المرجع (1672×941) عبر الوحدة --px.
    * الشهادة: لوحة A4 أفقية بإحداثيات المرجع (1536×1024) عبر الوحدة --cx.
-   * زخارف الواجهة في static/welcome وزخارف الشهادة في static/decor، مقتطعة من المرجعين
+   * زخارف الواجهة في static/welcome، وخلفية الشهادة في static/cert (بلا نصوص)
      بلا نصوص أو أزرار أو حقول. كل النصوص والحقول والأزرار عناصر HTML.
    ===================================================================== */
 :root{--om-red:#8b1020;--om-red-2:#c3121f;--om-green:#1f4a2b;--om-green-2:#0f6b35;--om-gold:#e0bd72;--om-ink:#2a2117;
@@ -37,22 +37,6 @@ body:has(#welcome.hidden) .om-d--top,body:has(#welcome.hidden) .om-d--mid,body:h
 #welcomeMusicToggle[aria-pressed="true"]{background:#0f6b35;color:#fff}
 #welcomeMusicHint{display:none!important}
 
-
-/* ---------- الشعار المركزي (مشترك بين الواجهة والشهادة) ---------- */
-.om-crest{position:absolute;z-index:3;container-type:inline-size}
-.om-crest__flag{position:absolute;width:22%;height:70%;top:16%;filter:drop-shadow(0 2px 3px rgba(80,20,10,.25))}
-.om-crest__flag--l{left:0}
-.om-crest__flag--r{right:0;top:12%;transform:scaleX(-1)}
-.om-crest__plate{position:absolute;left:17%;top:3%;width:61%;height:68%;display:grid;place-items:center;filter:drop-shadow(0 4px 6px rgba(80,10,10,.35))}
-.om-crest__plate>svg{position:absolute;inset:0;width:100%;height:100%}
-.om-crest .om-crest__title{position:relative;margin:0;padding:0 0 1.2cqw;font-family:var(--om-font);font-size:9.6cqw;font-weight:900;line-height:1;letter-spacing:0;white-space:nowrap;
-  color:#f3c94f;background:linear-gradient(180deg,#fff6c8 10%,#f7d468 40%,#e2a72e 68%,#fbe08a 92%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  filter:drop-shadow(0 .25cqw 0 #4a050f) drop-shadow(0 0 .12cqw #3a040b)}
-.om-crest__ribbon{position:absolute;z-index:1;left:25.5%;top:64%;width:43.5%;height:32%;margin:0;display:grid;place-items:center;
-  background:linear-gradient(180deg,#fff0b0,#e4ad3a 50%,#c88a1e);clip-path:polygon(0 50%,6% 0,94% 0,100% 50%,94% 100%,6% 100%);filter:drop-shadow(0 3px 4px rgba(20,40,20,.3))}
-.om-crest__ribbon span{display:grid;place-items:center;width:calc(100% - .9cqw);height:calc(100% - .9cqw);color:#fff8e2;font-size:4.1cqw;font-weight:900;line-height:1;white-space:nowrap;
-  background:linear-gradient(180deg,#1f8044,#0e5a2c 60%,#0b4a24);clip-path:polygon(0 50%,6% 0,94% 0,100% 50%,94% 100%,6% 100%)}
-.om-crest__khanjar{position:absolute;z-index:2;left:70.5%;top:-4%;width:16.5%;height:102%;transform:rotate(20deg);filter:drop-shadow(0 4px 4px rgba(60,30,0,.4))}
 
 /* ---------- شاشة الترحيب: مواضع المرجع الأخير (وحدة --px = بكسل في المرجع) ---------- */
 #welcome.panel{position:static;padding:0;margin:0;background:none;border:0;border-radius:0;box-shadow:none}
@@ -133,52 +117,39 @@ body:has(#welcome.hidden) .om-d--top,body:has(#welcome.hidden) .om-d--mid,body:h
 #done .actions .primary{background:linear-gradient(180deg,#d0202b,#8b0a16)}
 #done #rankings table{background:#fffdf8}
 
-/* ---------- الشهادة: لوحة A4 أفقية ---------- */
-body:has(#cert:not(.hidden)) .om-decor,body:has(#cert:not(.hidden)) .om-header{display:none}
-body:has(#cert:not(.hidden)) .om-stage{background:#f4ead8}
+/* ---------- الشهادة: A4 أفقي (297×210) — نسخة 14 ----------
+   الخلفية static/cert/certificate-background.jpg مأخوذة من المرجع بعد إزالة كل نصوصه؛
+   النصوص (ومنها الاسم والجهة والدرجة) عناصر HTML. الوحدتان: --cx أفقيًا و--cy رأسيًا
+   بإحداثيات المرجع 1536×1024 بعد مواءمته لنسبة A4. */
+body:has(#cert:not(.hidden)) .om-decor{display:none}
+body:has(#cert:not(.hidden)) .om-stage{width:100%;max-width:none;aspect-ratio:auto;overflow:visible;padding:16px 12px 8px;box-sizing:border-box;background:#efe4cf}
 body:has(#cert:not(.hidden)) .om-footer .creator-credit{display:none}
-#cert.certificate{position:relative;z-index:3;width:calc(var(--px)*1320);max-width:calc(100% - 24px);margin:calc(var(--px)*24) auto;padding:0;border:0;outline:0;border-radius:0;background:none;box-shadow:none;text-align:center;overflow:visible}
-.om-cert{position:relative;overflow:hidden;width:100%;aspect-ratio:1536/1024;container-type:inline-size;--cx:calc(100cqw / 1536);
-  background:linear-gradient(180deg,#d3d2f3 0%,#eddff0 9%,#fde7e0 17%,#fdf1e4 25%,#fdf4e4 100%);box-shadow:0 14px 40px rgba(80,50,10,.25);
+#cert.certificate{position:relative;z-index:3;width:auto;max-width:none;margin:0;padding:0;border:0;outline:0;border-radius:0;background:none;box-shadow:none;text-align:center;overflow:visible}
+.om-certwrap{width:min(100%,calc((100svh - 120px) * 297 / 210));min-width:min(100%,300px);margin:0 auto}
+.om-cert{position:relative;width:100%;aspect-ratio:297/210;container-type:inline-size;--cx:calc(100cqw / 1536);--cy:calc(100cqw * 210 / 297 / 1024);
+  background:#fbf1e1 url('/static/cert/certificate-background.jpg') center/100% 100% no-repeat;box-shadow:0 12px 36px rgba(80,50,10,.28);
   -webkit-print-color-adjust:exact;print-color-adjust:exact}
-.om-cert::before{content:"";position:absolute;z-index:1;left:0;right:0;top:0;height:calc(var(--cx)*7);background:linear-gradient(180deg,#f7d77c,#d9a537)}
-.om-cert__decor{position:absolute;inset:0;z-index:1}
-.om-c{position:absolute;display:block;max-width:none}
-.om-c--left{left:0;top:0;width:calc(var(--cx)*305);height:calc(var(--cx)*790)}
-.om-c--right{right:0;top:0;width:calc(var(--cx)*351);height:calc(var(--cx)*790)}
-.om-c--bottom{left:0;bottom:0;width:100%;height:calc(var(--cx)*242)}
-.om-crest--cert{left:calc(var(--cx)*310);top:calc(var(--cx)*12);width:calc(var(--cx)*925);height:calc(var(--cx)*200)}
-.om-cert__title{position:absolute;z-index:3;left:0;right:0;top:calc(var(--cx)*222);height:calc(var(--cx)*118);margin:0;display:grid;place-items:center}
-.om-cert__title span{font-family:"Arabic Typesetting","Aldhabi","Traditional Arabic","Amiri","Noto Naskh Arabic",serif;font-size:calc(var(--cx)*158);font-weight:700;line-height:1;color:#7a1020;text-shadow:0 calc(var(--cx)*2) 0 #f3d9a6,0 calc(var(--cx)*4) calc(var(--cx)*6) rgba(90,20,10,.18)}
-.om-cert__scroll{position:absolute;top:calc(var(--cx)*36);width:calc(var(--cx)*145);height:calc(var(--cx)*70)}
-.om-cert__scroll--l{left:calc(var(--cx)*350)}
-.om-cert__scroll--r{right:calc(var(--cx)*366);transform:scaleX(-1)}
-.om-cert__to{position:absolute;z-index:3;left:0;right:0;top:calc(var(--cx)*380);margin:0;display:flex;align-items:center;justify-content:center;gap:calc(var(--cx)*26);color:#1f3a22;font-size:calc(var(--cx)*31);font-weight:800;line-height:calc(var(--cx)*42)}
-.om-cert__to::before,.om-cert__to::after{content:"";width:calc(var(--cx)*135);height:calc(var(--cx)*3);background:linear-gradient(90deg,transparent,#d9a537 25%,#d9a537 75%,transparent)}
-.om-cert__name{position:absolute;z-index:3;left:calc(var(--cx)*340);top:calc(var(--cx)*435);width:calc(var(--cx)*835);height:calc(var(--cx)*95)}
-.om-cert__namebox{position:absolute;left:calc(var(--cx)*35);right:calc(var(--cx)*65);top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;box-sizing:border-box;
-  border:calc(var(--cx)*3) solid #d9a537;border-radius:calc(var(--cx)*22);background:linear-gradient(90deg,#fbe7b6,#fff6dc 30%,#fff6dc 70%,#fbe7b6);box-shadow:inset 0 0 0 calc(var(--cx)*4) #fff3d2,inset 0 0 0 calc(var(--cx)*5) #e8c473,0 calc(var(--cx)*3) calc(var(--cx)*8) rgba(150,100,20,.25)}
-#certName{margin:0;color:#7a1020;font-size:calc(var(--cx)*48);font-weight:900;line-height:1.15;white-space:nowrap;max-width:94%;overflow:hidden;text-overflow:ellipsis}
-#certOrg{margin:0;color:#1f4a2b;font-size:calc(var(--cx)*21);font-weight:800;line-height:1.2}
+.om-cert>*{position:absolute;z-index:1;margin:0;text-align:center;line-height:1}
+.om-cert__brand{left:calc(var(--cx)*505);width:calc(var(--cx)*530);top:calc(var(--cy)*121);height:calc(var(--cy)*84);display:grid;place-items:center;font-size:calc(var(--cx)*68);font-weight:900;white-space:nowrap;
+  color:#f3c94f;background:linear-gradient(180deg,#fff6c8 10%,#f7d468 40%,#e2a72e 68%,#fbe08a 92%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 calc(var(--cx)*3) 0 #4a050f)}
+.om-cert__challenge{left:calc(var(--cx)*560);width:calc(var(--cx)*415);top:calc(var(--cy)*229);height:calc(var(--cy)*48);display:grid;place-items:center;color:#fff6dc;font-size:calc(var(--cx)*32);font-weight:800;white-space:nowrap;text-shadow:0 calc(var(--cx)*2) calc(var(--cx)*3) rgba(0,0,0,.4)}
+.om-cert__title{left:0;right:0;top:calc(var(--cy)*300);height:calc(var(--cy)*118);display:grid;place-items:center;color:#7d1424;font-size:calc(var(--cx)*92);font-weight:900;white-space:nowrap;
+  text-shadow:0 calc(var(--cx)*3) 0 #e9c98b,0 calc(var(--cx)*7) calc(var(--cx)*10) rgba(90,20,10,.25)}
+.om-cert__to{left:0;right:0;top:calc(var(--cy)*426);height:calc(var(--cy)*44);display:grid;place-items:center;color:#1f4a2b;font-size:calc(var(--cx)*30);font-weight:800}
+.om-cert__namebox{left:calc(var(--cx)*462);width:calc(var(--cx)*616);top:calc(var(--cy)*496);height:calc(var(--cy)*80);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(var(--cy)*3);overflow:hidden}
+#certName{margin:0;max-width:100%;color:#7d1424;font-size:calc(var(--cx)*52*var(--fit,1));font-weight:900;line-height:1.12;white-space:nowrap}
+#certOrg{margin:0;max-width:100%;color:#1f4a2b;font-size:calc(var(--cx)*20);font-weight:800;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 #certOrg:empty{display:none}
-.om-cert__namebox:has(#certOrg:not(:empty)) #certName{font-size:calc(var(--cx)*40)}
-.om-cert__fl{position:absolute;top:calc(var(--cx)*20);width:calc(var(--cx)*55);height:calc(var(--cx)*55)}
-.om-cert__fl--r{right:0}
-.om-cert__fl--l{left:0}
-.om-cert__for{position:absolute;z-index:3;left:0;right:0;top:calc(var(--cx)*535);margin:0;color:#1f3a22;font-size:calc(var(--cx)*30);font-weight:800;line-height:calc(var(--cx)*42)}
-.om-cert__comp{position:absolute;z-index:3;left:calc(var(--cx)*410);top:calc(var(--cx)*590);width:calc(var(--cx)*670);height:calc(var(--cx)*65);box-sizing:border-box;margin:0;display:grid;place-items:center;
-  border:calc(var(--cx)*2) solid #e0bd72;border-radius:999px;background:linear-gradient(180deg,#fff7e2,#fbe3b0);color:#7a1020;font-size:calc(var(--cx)*31);font-weight:900;white-space:nowrap}
-.om-cert__score{position:absolute;z-index:3;left:calc(var(--cx)*495);top:calc(var(--cx)*672);width:calc(var(--cx)*545);height:calc(var(--cx)*100)}
-.om-cert__scorebox{position:absolute;left:calc(var(--cx)*60);top:calc(var(--cx)*6);width:calc(var(--cx)*425);height:calc(var(--cx)*72);box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:calc(var(--cx)*22);
-  border:calc(var(--cx)*2) solid #e0bd72;border-radius:999px;background:linear-gradient(180deg,#fff7e2,#fbe3b0)}
-.om-cert__scorelabel{color:#1f3a22;font-size:calc(var(--cx)*23);font-weight:800}
-.om-cert__scorebox i{font-style:normal;color:#c99a3d;font-size:calc(var(--cx)*26);font-weight:700}
-.om-cert__scorevalue{color:#2a2117;font-size:calc(var(--cx)*40);font-weight:900;white-space:nowrap}
-.om-cert__scorevalue small{font-size:.5em;font-weight:800;color:#5a4630;margin-inline-start:calc(var(--cx)*6)}
-.om-cert__laurel{position:absolute;top:0;width:calc(var(--cx)*55);height:calc(var(--cx)*100)}
-.om-cert__laurel--l{left:0}
-.om-cert__laurel--r{right:0;transform:scaleX(-1)}
-.om-cert__actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:16px 0 4px}
+.om-cert__namebox:has(#certOrg:not(:empty)) #certName{font-size:calc(var(--cx)*44*var(--fit,1))}
+.om-cert__for{left:0;right:0;top:calc(var(--cy)*588);height:calc(var(--cy)*46);display:grid;place-items:center;color:#1f4a2b;font-size:calc(var(--cx)*29);font-weight:800}
+.om-cert__comp{left:calc(var(--cx)*450);width:calc(var(--cx)*636);top:calc(var(--cy)*645);height:calc(var(--cy)*49);display:grid;place-items:center;color:#fff3dc;font-size:calc(var(--cx)*29);font-weight:800;white-space:nowrap}
+.om-cert__score{left:calc(var(--cx)*470);width:calc(var(--cx)*600);top:calc(var(--cy)*745);height:calc(var(--cy)*75)}
+.om-cert__scorelabel{position:absolute;left:calc(var(--cx)*370);width:calc(var(--cx)*200);top:0;height:100%;display:grid;place-items:center;color:#1f4a2b;font-size:calc(var(--cx)*25);font-weight:800;white-space:nowrap}
+.om-cert__scorevalue{position:absolute;left:calc(var(--cx)*25);width:calc(var(--cx)*245);top:0;height:100%;display:flex;align-items:center;justify-content:center;gap:calc(var(--cx)*12);color:#6e0f1e;font-size:calc(var(--cx)*44);font-weight:900;white-space:nowrap}
+.om-cert__scorevalue small{font-size:.5em;font-weight:800;color:#2a2117}
+.om-cert__scorevalue small::before{content:"/";color:#c99a3d;margin-inline-end:calc(var(--cx)*12)}
+.om-cert__actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:14px 0 4px}
 .om-cert__actions button{border-radius:999px;padding:12px 26px;border:1.5px solid #e0bd72}
 .om-cert__actions .primary{background:linear-gradient(180deg,#d0202b,#8b0a16)}
 
@@ -234,17 +205,17 @@ body:has(#cert:not(.hidden)) .om-footer .creator-credit{display:none}
   .om-start svg{width:28px;height:28px}
   .om-stage .om-screen{width:100%;max-width:none;margin:120px 0 40px;padding:20px 16px}
   #quiz .options{grid-template-columns:1fr}
-  #cert.certificate{width:100%;max-width:none;margin:16px 0}
 }
 
 
-/* ---------- الطباعة: الشهادة وحدها على صفحة A4 أفقية واحدة ---------- */
+/* ---------- الطباعة: الشهادة وحدها على صفحة A4 أفقية واحدة (297×210 ملم) ---------- */
 @media print{
   @page{size:A4 landscape;margin:0}
   html,body{width:297mm;height:210mm;margin:0!important;padding:0!important;background:#fff!important;overflow:hidden}
   .om-decor,.om-header,.om-footer,.no-print,#message,#welcome,#quiz,#done,.om-cert__actions{display:none!important}
-  .om-stage{width:297mm!important;height:210mm!important;aspect-ratio:auto!important;margin:0!important;padding:0!important;background:#fff!important;overflow:hidden!important}
+  .om-stage{width:297mm!important;height:210mm!important;max-width:none!important;aspect-ratio:auto!important;margin:0!important;padding:0!important;background:#fff!important;overflow:hidden!important}
   .om-stage .container{margin:0!important;padding:0!important}
-  #cert.certificate{display:block!important;width:285mm!important;max-width:none!important;margin:6mm auto 0!important;padding:0!important;break-inside:avoid;page-break-inside:avoid}
-  .om-cert{width:285mm!important;box-shadow:none!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  #cert.certificate{display:block!important;width:297mm!important;height:210mm!important;margin:0!important;padding:0!important;break-inside:avoid;page-break-inside:avoid}
+  .om-certwrap{width:297mm!important;min-width:0!important;margin:0!important}
+  .om-cert{width:297mm!important;height:210mm!important;aspect-ratio:auto!important;box-shadow:none!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
 }

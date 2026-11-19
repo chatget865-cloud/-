@@ -1,0 +1,39 @@
+/* Oman Majd visual enhancement — scoped to welcome, quiz and results only. */
+:root{--om-cream:#fffaf1;--om-green:#174d3d;--om-red:#981f35;--om-gold:#c6a266}
+body{background-color:#f8f2e8}
+.top{max-width:1180px;background:rgba(255,251,244,.87);border:1px solid #e9d8ba;border-radius:0 0 22px 22px;box-shadow:0 8px 24px #5d42200c}
+.container{width:min(100% - 28px,1040px)}
+#welcome,#quiz,#done{position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(255,253,248,.97),rgba(255,247,235,.97));border:1px solid #d7b77c;box-shadow:0 22px 60px #4b3b291b;border-radius:25px}
+#welcome:before,#quiz:before,#done:before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#8e1d32,#d5ad65,#16523c)}
+#welcome{padding:42px clamp(20px,5vw,64px) 38px}
+#welcome h1{font-size:clamp(52px,8vw,90px);text-shadow:0 2px 0 #e8d2a5}
+#welcome .lead{color:#415e51;font-weight:500}
+.om-hero-art{height:185px;margin:22px auto 12px;max-width:850px;border:2px solid #d2b174;border-radius:24px;overflow:hidden;background:linear-gradient(180deg,#edf4f0b0,#fff9eddd),url('/static/oman-heritage.png') center 40%/cover no-repeat;position:relative}
+.om-hero-art:after{content:'عُمان... تاريخٌ وحضارةٌ ومعرفة';position:absolute;bottom:12px;right:18px;left:18px;padding:10px;background:#fffaf0df;border-radius:10px;color:#164b3a;font-size:clamp(14px,2vw,19px);font-weight:800}
+.om-axes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:18px 0 25px}
+.om-axis{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;min-height:112px;padding:12px 7px;border:1px solid #d8bd88;border-radius:17px;background:linear-gradient(180deg,#fffdf7,#f7ecd9);box-shadow:0 3px 10px #7e5d2212;color:#184a3b;font-size:13px;font-weight:800;line-height:1.5}
+.om-axis .om-icon{font-size:28px;line-height:1}
+#welcome .stats>div{border:1px solid #d9c29b;background:#fffaf0;box-shadow:0 3px 8px #765a2710}
+#welcome .stats b{font-size:34px}
+#welcome .form-heading{font-size:19px}
+#welcome .form{max-width:760px;margin:auto}
+#welcome .form .primary,#quiz #next{background:linear-gradient(135deg,#8d1a30,#ae2940);border:1px solid #cda96b;box-shadow:0 4px 0 #6e1b2a24;font-size:18px}
+#quiz{padding:34px clamp(20px,4vw,55px) 38px}
+#quiz .quiz-head{font-size:16px;font-weight:800}
+#quiz .pill{border:1px solid #bca46e;background:#f9f0de;color:#194b3b}
+#quiz .progress{height:13px;background:#e8dfce}
+#quiz .progress>div{background:linear-gradient(90deg,#b78b42,#237451)}
+#quiz .timer-wrap strong{width:90px;height:90px;border:6px solid #bb9d62;background:#fffaf0;font-size:34px;box-shadow:0 4px 12px #604e2716}
+#quiz .timer-wrap strong.urgent{border-color:#a8233c;background:#fff0f0}
+#quiz h2{background:#fffdf8;border:1px solid #e2cda5;border-radius:20px;padding:24px;line-height:1.85;text-align:center;color:#173f33}
+#quiz .options{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+#quiz .option{border:1px solid #d7bd91;background:#fffdf8;min-height:70px;font-size:16px}
+#quiz .option.selected{background:#e5f3e8;border:2px solid #21704f}
+#done{text-align:center;padding:50px 30px}
+#done .trophy{font-size:74px}
+#done h2{color:#96213a;font-size:clamp(28px,5vw,40px)}
+#done .score{border:1px solid #c8a56d;background:#fff6e6}
+#done .actions button{border:1px solid #c8a56d}
+/* Keep certificate and admin styles unchanged. */
+@media(max-width:750px){.om-axes{grid-template-columns:repeat(2,minmax(0,1fr))}.om-axis:last-child{grid-column:1/-1}.om-hero-art{height:135px}#quiz .options{grid-template-columns:1fr}#welcome{padding:30px 18px}#quiz{padding:28px 18px}#quiz h2{padding:17px;font-size:21px}}
+@media print{.om-hero-art,.om-axes{display:none!important}}

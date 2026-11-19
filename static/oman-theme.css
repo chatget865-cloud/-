@@ -55,120 +55,29 @@ body{background-color:#f8f2e8}
 /* Certificate A4 layout and admin are intentionally untouched. */
 @media print{.om-axes,.om-axis-title{display:none!important}}
 
-/* Creative V3: responsive immersive Oman heritage landing page.
-   Deliberately scoped: no changes to certificate, audio, game API or admin. */
-@media screen {
-  body:has(#welcome:not(.hidden)) {
-    background-image:
-      linear-gradient(90deg,rgba(255,249,239,.08),rgba(255,249,239,.12)),
-      url('/static/oman-heritage.png');
-    background-size:cover;
-    background-position:center top;
-  }
-  #welcome {
-    border:2px solid #d3ab66;
-    border-radius:38px;
-    background:
-      radial-gradient(ellipse at 50% 3%,rgba(255,255,255,.98) 0%,rgba(255,250,239,.94) 52%,rgba(253,242,220,.96) 100%);
-    box-shadow:0 28px 80px rgba(68,46,24,.22),inset 0 0 0 7px rgba(255,255,255,.42);
-    padding-top:20px;
-  }
-  #welcome::before{height:7px;border-radius:38px 38px 0 0}
-  #welcome .eyebrow::before{height:40px;opacity:.85;background-position:center 47%}
-  #welcome h1{font-weight:900;letter-spacing:-2px;text-shadow:0 2px 0 #ead4aa,0 8px 22px rgba(90,54,27,.12)}
-  #welcome .lead{margin:9px auto 12px;max-width:670px}
-  #welcome .om-axis-title{margin:10px auto 10px}
-  #welcome .om-axes{gap:11px}
-  #welcome .om-axis{position:relative;border:1.5px solid #d4a75c;border-radius:18px;background:linear-gradient(180deg,#fffefa,#f7ead2);box-shadow:0 5px 0 rgba(179,129,60,.10),0 9px 18px rgba(83,52,26,.08);transition:transform .18s ease,box-shadow .18s ease}
-  #welcome .om-axis:hover{transform:translateY(-3px);box-shadow:0 9px 22px rgba(83,52,26,.15)}
-  #welcome .om-axis .om-icon{font-size:29px}
-  #welcome .stats{border:1px solid #d5b67c;border-radius:22px;padding:6px;background:rgba(255,255,255,.6);box-shadow:0 6px 16px rgba(74,49,21,.07)}
-  #welcome .stats>div{border:0;background:transparent;box-shadow:none;border-radius:0;padding:8px}
-  #welcome .stats>div+div{border-right:1px solid #decba8}
-  #welcome .form-heading{color:#16503d;font-size:21px;margin:11px auto 10px}
-  #welcome .form{padding:16px 20px 12px;border:1px solid #e4cda5;border-radius:24px;background:linear-gradient(180deg,rgba(255,253,247,.8),rgba(255,247,232,.86))}
-  #welcome .form label{font-weight:800;color:#174d3d}
-  #welcome .form input{border-radius:14px;border:1px solid #d8bf93;box-shadow:0 2px 5px rgba(89,62,31,.05)}
-  #welcome .form .primary{border-radius:18px;box-shadow:0 5px 0 rgba(93,21,36,.2),0 10px 18px rgba(93,21,36,.13);transition:transform .15s,filter .15s}
-  #welcome .form .primary:hover{filter:brightness(1.07);transform:translateY(-2px)}
-  #welcome .hint{font-size:12px;color:#546a5b}
-  #quiz{border:2px solid #d2ac6d;box-shadow:0 24px 65px #3f301f27}
-  #quiz .quiz-head{padding:8px 12px;background:#fffaf0;border:1px solid #e3cfaa;border-radius:15px}
-  #quiz .timer-wrap strong{box-shadow:0 0 0 5px #f7e9cd,0 8px 18px #3c2c161c}
-  #quiz .option{border-radius:16px;box-shadow:0 3px 10px #5c45220c;transition:transform .15s,border-color .15s}
-  #quiz .option:hover{transform:translateY(-2px)}
-  #done{border:2px solid #d2ac6d}
+/* Approved visual direction — scenic Oman, full-size interactive content. */
+@media screen and (min-width:900px){
+ body{background-image:url('/static/scene-left.webp'),url('/static/scene-right.webp'),linear-gradient(125deg,#f7e8d4,#fff9ee 42%,#e8f3ef 80%,#f4e2ca)!important;background-position:left center,right center,center!important;background-size:max(18vw,240px) 100vh,max(18vw,240px) 100vh,cover!important;background-repeat:no-repeat!important;background-attachment:fixed!important}
+ body::before{background:linear-gradient(90deg,rgba(255,249,239,.02),rgba(255,250,240,.13) 20%,rgba(255,250,240,.05) 80%,rgba(255,249,239,.02))!important}
+ .container{width:min(calc(100% - 32px),1120px)!important;margin:10px auto 28px!important}
+ #welcome{padding:15px clamp(22px,3vw,45px) 20px!important;border:2px solid #d9a653!important;border-radius:44px!important;box-shadow:0 12px 35px #6a411e27!important}
+ #welcome .eyebrow:before{height:30px!important;margin:0 auto 1px!important;background:none!important}
+ #welcome .hero-crown{display:none!important}
+ #welcome h1{font-size:clamp(66px,6.7vw,112px)!important;margin:3px auto 0!important;letter-spacing:-1px!important}
+ #welcome .lead{margin:7px auto 8px!important;line-height:1.4!important}
+ #welcome #welcomeMusicToggle{margin:2px auto!important;padding:7px 24px!important}
+ #welcome .om-axis-title{margin:8px auto 8px!important;font-size:19px!important}
+ #welcome .om-axes{margin-bottom:12px!important}
+ #welcome .om-axis{min-height:90px!important;background:linear-gradient(#fffdf7,#f5e5ca)!important;border:2px solid #d8ac62!important;box-shadow:0 5px 10px #8053231e!important}
+ #welcome .stats{margin-bottom:11px!important}
+ #welcome .stats>div{padding:9px!important}
+ #welcome .form-heading{margin:6px auto!important}
+ #welcome .form-heading span:first-child{background:#125b3f;color:#fff;border:1px solid #c9a35b;border-radius:30px;padding:5px 38px}
+ #welcome .form{background:linear-gradient(180deg,#fff8ed,#ffefd9);border:1px solid #d9b67b;border-radius:26px;padding:12px 20px;gap:8px 20px}
+ #welcome .form input{height:44px!important;border-radius:22px!important}
+ #welcome .form .primary{border-radius:25px!important;max-width:420px!important;font-size:21px!important;padding:10px!important}
+ #welcome .hint{margin:9px auto 0!important}
 }
-@media screen and (min-width:1200px){
-  .container:has(#welcome:not(.hidden)){width:min(100% - 60px,1190px);margin:12px auto 32px}
-  #welcome{padding:14px clamp(35px,5vw,70px) 22px}
-  #welcome .hero-crown{margin-bottom:0}
-  #welcome .eyebrow::before{height:28px;margin-bottom:1px}
-  #welcome h1{font-size:clamp(62px,5.8vw,92px);margin:5px 0 1px}
-  #welcome .om-axis{min-height:77px;padding:7px}
-  #welcome .stats{margin-bottom:9px}
-  #welcome .form-heading{margin:7px auto}
-  #welcome .form{padding:10px 18px}
-  #welcome .form input{height:45px}
-  #welcome .form .primary{padding:11px 18px}
-}
-@media screen and (max-width:780px){
-  #welcome{border-radius:22px;padding:22px 14px}
-  #welcome .form{padding:14px}
-  #welcome .stats{gap:0}
-  #welcome .om-axis{min-height:84px}
-}
-@media (prefers-reduced-motion:reduce){#welcome .om-axis,#welcome .form .primary,#quiz .option{transition:none}}
-
-/* V4 — Approved visual composition. Purely visual: no game, audio, print, or API changes. */
-@media screen {
- body {background:#f8edda!important;background-image:linear-gradient(90deg,rgba(250,239,219,.16),rgba(255,252,246,.2),rgba(250,239,219,.16)),url('/static/oman-heritage.png')!important;background-position:center top!important;background-size:cover!important;}
- body::before {content:''!important;position:fixed!important;inset:0 auto 0 0!important;width:max(19vw,150px)!important;pointer-events:none!important;z-index:0!important;background:linear-gradient(90deg,transparent 72%,#fff6e8 100%),url('/static/scene-left.webp') left center/cover no-repeat!important;opacity:1!important;}
- body::after {content:'';position:fixed;inset:0 0 0 auto;width:max(19vw,150px);pointer-events:none;z-index:0;background:linear-gradient(270deg,transparent 72%,#fff6e8 100%),url('/static/scene-right.webp') right center/cover no-repeat;}
- .top{position:relative;z-index:2;max-width:1280px;background:rgba(255,251,244,.93);padding:12px 25px;border:1px solid #e8c78b;border-radius:0 0 26px 26px;}
- .container{position:relative;z-index:1;width:min(100% - 26px,1090px);margin:12px auto 28px;}
- #welcome{background:radial-gradient(ellipse at 50% 14%,#fffefa 0%,#fff8ec 62%,#fff0d8 100%)!important;border:3px solid #dfad51!important;outline:1px solid #fff9e9;outline-offset:-10px;border-radius:90px 90px 36px 36px!important;box-shadow:0 12px 60px #6b451d35, inset 0 0 45px #eac99136!important;padding:18px clamp(20px,3vw,50px) 20px!important;}
- #welcome:before{height:0!important;}
- #welcome:after{background:radial-gradient(ellipse at center,#fff9e9 0%,transparent 68%)!important;opacity:.55!important;}
- #welcome .hero-crown{font-size:0!important;height:0!important;margin:0!important;}
- #welcome .eyebrow{font-size:17px!important;font-weight:900!important;color:#a11e32!important;letter-spacing:0!important;margin:0 auto 2px!important;}
- #welcome .eyebrow::before{display:none!important;}
- #welcome h1{font-size:clamp(67px,7.6vw,116px)!important;font-weight:950!important;line-height:1.05!important;margin:0 auto 2px!important;letter-spacing:-2px!important;text-shadow:0 3px 0 #d6ad5b,0 7px 13px #764e2338!important;}
- #welcome h1::after{content:'تحدي المعرفة الوطنية';display:block;width:max-content;max-width:96%;margin:1px auto 4px;padding:4px 36px;border:2px solid #dfac45;border-radius:24px;background:linear-gradient(180deg,#ffe5a0,#edc164);box-shadow:0 3px 7px #5c3c2028;color:#163f31;font-size:clamp(16px,2.1vw,25px);font-weight:900;letter-spacing:0;text-shadow:none;}
- #welcome .lead{margin:8px auto 7px!important;font-size:clamp(14px,1.4vw,18px)!important;line-height:1.45!important;color:#174d3d!important;font-weight:800!important;}
- #welcome #welcomeMusicToggle{margin:3px auto 2px!important;padding:7px 18px!important;background:linear-gradient(#fff7e6,#ffe5b1)!important;border:1px solid #d4a358!important;}
- #welcome .om-axis-title{margin:7px auto 8px!important;color:#9b1d33!important;font-size:17px!important;}
- #welcome .om-axes{max-width:990px!important;gap:10px!important;margin:0 auto 12px!important;}
- #welcome .om-axis{min-height:104px!important;padding:10px 5px!important;background:linear-gradient(180deg,#fffefa,#fff0d5)!important;border:2px solid #e5b767!important;border-radius:18px!important;box-shadow:0 5px 0 #d7a45455,0 9px 15px #78502122!important;font-size:clamp(12px,1.2vw,16px)!important;}
- #welcome .om-axis .om-icon{font-size:31px!important;}
- #welcome .stats{max-width:990px!important;margin:0 auto 9px!important;gap:0!important;border:2px solid #dfb268!important;border-radius:20px!important;overflow:hidden;background:#fffaf1!important;box-shadow:0 5px 12px #805c2830!important;}
- #welcome .stats>div{border:0!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;padding:10px 5px!important;}
- #welcome .stats>div+div{border-right:1px solid #d5a861!important;}
- #welcome .stats b{font-size:36px!important;color:#a51e35!important;line-height:1.1!important;}
- #welcome .stats span{font-size:14px!important;font-weight:750!important;color:#184735!important;}
- #welcome .form-heading{font-size:20px!important;margin:4px auto 7px!important;color:#174d3d!important;}
- #welcome .form-heading span:first-child{border-radius:30px;background:linear-gradient(100deg,#0b593c,#24734c);color:white;padding:5px 42px;box-shadow:0 2px 0 #b8904d;}
- #welcome .form-heading .fine-line{display:none!important;}
- #welcome .form{max-width:1000px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px 22px!important;padding:12px 18px!important;background:linear-gradient(180deg,#fff7e9,#ffefd5)!important;border:1px solid #e3bd7a!important;border-radius:25px!important;}
- #welcome .form label{font-size:14px!important;color:#184b38!important;}
- #welcome .form input{height:45px!important;border-radius:25px!important;background:white!important;border:1px solid #d7b176!important;box-shadow:0 3px 8px #66401b18!important;}
- #welcome .form .primary{grid-column:1/-1!important;justify-self:center!important;width:min(100%,390px)!important;padding:11px 18px!important;font-size:24px!important;border:2px solid #e6bd58!important;border-radius:30px!important;background:linear-gradient(180deg,#c41b3b,#8e102b)!important;box-shadow:0 5px 0 #b68a43,0 9px 14px #5a1c2b2a!important;}
- #welcome .hint{margin:9px auto 0!important;color:#24503e!important;font-size:12px!important;font-weight:650!important;}
- #quiz,#done{border:2px solid #dbaf67!important;border-radius:30px!important;background:linear-gradient(160deg,#fffefa,#fff4e5)!important;}
- #quiz .option{border-radius:16px!important;box-shadow:0 3px 8px #64471e14;}
-}
-@media screen and (max-width:780px){
- body::before,body::after{display:none!important;}
- .container{width:calc(100% - 20px)!important;}
- #welcome{border-radius:30px!important;padding:18px 13px 20px!important;}
- #welcome h1{font-size:clamp(54px,12vw,78px)!important;}
- #welcome .eyebrow{font-size:13px!important;}
- #welcome .om-axes{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
- #welcome .om-axis:last-child{grid-column:1/-1!important;}
- #welcome .form{grid-template-columns:1fr!important;padding:12px!important;}
- #welcome .form .primary{grid-column:1!important;}
- #welcome .stats b{font-size:28px!important;}
- #welcome .stats span{font-size:10px!important;}
- #welcome .om-axis{min-height:84px!important;}
-}
-@media print{body::after{display:none!important}}
+@media screen and (max-width:899px){body{background-image:linear-gradient(#fff8edbb,#fff8eddd),url('/static/oman-heritage.png')!important;background-size:cover!important;background-position:center top!important}#welcome .eyebrow:before{height:20px!important;background:none!important}#welcome{border:2px solid #d7ad65!important}#welcome .form-heading span:first-child{background:#165a3e;color:white;border-radius:25px;padding:5px 20px}}
+@media screen{#welcome .stats>div{border-color:#d7ae6b!important}#welcome .om-axis-title{color:#9d243b!important}#welcome .form .primary{background:linear-gradient(130deg,#9d1732,#c32443)!important;border:2px solid #d8ad61!important}#welcome .om-axis .om-icon{font-size:30px!important}}
+@media print{body{background:white!important}}

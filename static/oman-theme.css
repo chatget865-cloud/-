@@ -42,7 +42,8 @@ button,input{font-family:var(--om-font)}
   border:1.5px solid var(--om-gold);border-radius:999px;background:linear-gradient(180deg,#fffdf6,#fbeed4);color:#2a2117;font-size:calc(var(--px)*18);font-weight:800;box-shadow:0 calc(var(--px)*3) calc(var(--px)*10) rgba(150,100,30,.18)}
 .om-header .status::before{content:"";width:calc(var(--px)*20);height:calc(var(--px)*22);flex:none;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 22'%3E%3Cpath d='M5 10V6a5 5 0 0 1 10 0v4' fill='none' stroke='%2337302a' stroke-width='2.4'/%3E%3Crect x='2' y='9' width='16' height='12' rx='2.5' fill='%23b3121f'/%3E%3Ccircle cx='10' cy='15' r='2' fill='%23fff'/%3E%3C/svg%3E")}
 .om-header .status:not(.is-closed)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 22'%3E%3Cpath d='M5 10V6a5 5 0 0 1 9.6-2' fill='none' stroke='%2337302a' stroke-width='2.4'/%3E%3Crect x='2' y='9' width='16' height='12' rx='2.5' fill='%230f8a3c'/%3E%3Ccircle cx='10' cy='15' r='2' fill='%23fff'/%3E%3C/svg%3E")}
-.om-music{display:flex}
+.om-stage .om-music{position:absolute;z-index:3;left:calc(var(--px)*458);top:calc(var(--px)*167);display:flex}
+.om-stage .om-music #welcomeMusicToggle{padding:0 calc(var(--px)*12);height:calc(var(--px)*32);font-size:calc(var(--px)*13.5)}
 #welcomeMusicToggle{display:inline-flex;align-items:center;margin:0;padding:0 calc(var(--px)*16);height:calc(var(--px)*34);border:1.5px solid var(--om-gold);border-radius:999px;background:rgba(255,251,240,.95);color:var(--om-green);font-size:calc(var(--px)*14);font-weight:800;box-shadow:0 calc(var(--px)*2) calc(var(--px)*8) rgba(150,100,30,.15)}
 #welcomeMusicToggle[aria-pressed="true"]{background:#0f6b35;color:#fff}
 #welcomeMusicHint{display:none!important}
@@ -66,6 +67,7 @@ button,input{font-family:var(--om-font)}
 /* ---------- شاشة الترحيب: مواضع المرجع ---------- */
 #welcome.panel{position:static;padding:0;margin:0;background:none;border:0;border-radius:0;box-shadow:none}
 .om-stage .container{position:static;width:auto;max-width:none;margin:0;padding:0}
+.om-crest--welcome .om-crest__khanjar{left:72%;top:-3%;width:15.5%;height:98%}
 .om-crest--welcome{left:calc(var(--px)*465);top:calc(var(--px)*12);width:calc(var(--px)*780);height:calc(var(--px)*178)}
 .om-eyebrow{position:absolute;z-index:3;left:0;right:0;top:calc(var(--px)*202);margin:0;display:flex;align-items:center;justify-content:center;gap:calc(var(--px)*26);color:#8b1020;font-size:calc(var(--px)*22);font-weight:900;line-height:calc(var(--px)*32)}
 .om-eyebrow i{font-style:normal;color:#e3a62c;font-size:calc(var(--px)*15)}
@@ -209,6 +211,7 @@ body:has(#cert:not(.hidden)) .om-footer .creator-credit{display:none}
   #welcomeMusicToggle{height:32px;padding:0 12px;font-size:12px}
   #welcome.panel{padding-top:120px;text-align:center}
   .om-crest--welcome{position:relative;left:auto;top:auto;width:min(100%,520px);height:auto;aspect-ratio:780/178;margin:0 auto}
+  .om-stage .om-music{position:static;justify-content:center;margin:12px 0 0}
   .om-eyebrow,.om-lead,.om-axes-title,.om-axes,.om-stage .om-stats,.om-deadline,.om-stage .om-form-heading,.om-field,.om-stage .om-start{position:relative;left:auto;right:auto;top:auto;width:auto;height:auto}
   .om-eyebrow{margin:14px 0 4px;font-size:15px;gap:12px}
   .om-lead{font-size:16px;line-height:1.6}

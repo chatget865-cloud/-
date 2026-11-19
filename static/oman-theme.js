@@ -5,10 +5,6 @@
   const heading = welcome.querySelector('h1');
   const stats = welcome.querySelector('.stats');
   if (!heading || !stats) return;
-  const art = document.createElement('div');
-  art.className = 'om-hero-art';
-  art.setAttribute('aria-hidden','true');
-  heading.insertAdjacentElement('afterend',art);
   const categories = [
     ['🏰','التاريخ الوطني'],
     ['🗺️','الجغرافيا والمحافظات'],

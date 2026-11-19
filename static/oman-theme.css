@@ -129,3 +129,39 @@ body{background-color:#f8f2e8}
  body::before,body::after{background-position:center top!important}
 }
 @media print{body::before,body::after{display:none!important}}
+
+
+/* V6: unified responsive scenery, no fixed white side strips or cropped zoom. */
+@media screen and (min-width:1100px){
+ html{background:#fff8ec}
+ body{position:relative;isolation:isolate;background:linear-gradient(90deg,#f5e5d0 0%,#fff9ee 24%,#fff9ee 76%,#e9f2ed 100%)!important;background-attachment:scroll!important}
+ body::before,body::after{
+  content:""!important;position:fixed!important;top:0!important;bottom:0!important;
+  height:100dvh!important;width:clamp(230px,30vw,530px)!important;
+  background-repeat:no-repeat!important;background-size:auto 100%!important;
+  opacity:.96!important;pointer-events:none!important;z-index:-1!important;
+  transform:none!important;
+ }
+ body::before{
+  left:0!important;right:auto!important;
+  background-image:url('/static/scene-left-clean.webp')!important;
+  background-position:left center!important;
+  -webkit-mask-image:linear-gradient(to right,#000 0%,#000 40%,transparent 100%)!important;
+  mask-image:linear-gradient(to right,#000 0%,#000 40%,transparent 100%)!important;
+ }
+ body::after{
+  right:0!important;left:auto!important;
+  background-image:url('/static/scene-right-clean.webp')!important;
+  background-position:right center!important;
+  -webkit-mask-image:linear-gradient(to left,#000 0%,#000 40%,transparent 100%)!important;
+  mask-image:linear-gradient(to left,#000 0%,#000 40%,transparent 100%)!important;
+ }
+ .top,.container{position:relative!important;z-index:1!important;width:min(calc(100% - 40px),1100px)!important}
+ .top{margin:0 auto!important}
+ .container{margin:8px auto 30px!important}
+ #welcome{background:linear-gradient(165deg,rgba(255,253,248,.985),rgba(255,246,232,.98))!important;border-radius:34px!important}
+}
+@media screen and (max-width:1099px){
+ body::before,body::after{display:none!important}
+}
+@media print{body::before,body::after{display:none!important}}

@@ -165,3 +165,19 @@ body{background-color:#f8f2e8}
  body::before,body::after{display:none!important}
 }
 @media print{body::before,body::after{display:none!important}}
+
+
+/* V7: one unified scene; never render the two side images as separate strips. */
+@media screen and (min-width:900px){
+ html,body{background-color:#fcf4e8!important}
+ body{background-image:url('/static/oman-unified-scene.webp')!important;background-position:center top!important;background-repeat:no-repeat!important;background-size:100% 100vh!important;background-attachment:fixed!important;isolation:auto!important}
+ body::before,body::after{content:none!important;display:none!important;background:none!important}
+ .top,.container{position:relative!important;z-index:1!important;width:min(calc(100% - 36px),1100px)!important}
+ .top{background:rgba(255,250,239,.93)!important;border-radius:0 0 26px 26px!important}
+ .container{margin:8px auto 28px!important}
+ #welcome{border:2px solid #cda15a!important;border-radius:42px!important;background:linear-gradient(155deg,rgba(255,253,247,.97),rgba(255,245,227,.96))!important;box-shadow:0 12px 36px #63431b20!important}
+ #welcome .eyebrow:before{display:none!important}
+ #welcome .hero-crown{display:none!important}
+}
+@media screen and (max-width:899px){body::before,body::after{display:none!important}}
+@media print{body{background:white!important}body::before,body::after{display:none!important}}

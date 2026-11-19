@@ -61,7 +61,14 @@ def identity_key(name,org):
  return hashlib.sha256((normalize(name)+'\x00'+normalize(org)).encode('utf8')).hexdigest()
 def date_str(v):
  return datetime.datetime.fromtimestamp(v,datetime.timezone(datetime.timedelta(hours=4))).strftime('%Y-%m-%d %H:%M:%S') if v else ''
-def status(c):return c.execute("SELECT v FROM settings WHERE k='status'").fetchone()['v']
+# 30 November 2026, 23:59 Oman time (UTC+04:00).
+CLOSE_AT = datetime.datetime(2026, 11, 30, 23, 59, tzinfo=datetime.timezone(datetime.timedelta(hours=4))).timestamp()
+def status(c):
+ if time.time() >= CLOSE_AT:
+  # Persist closure on the first request after the deadline.
+  c.execute("UPDATE settings SET v='closed' WHERE k='status' AND v<>'closed'")
+  return 'closed'
+ return c.execute("SELECT v FROM settings WHERE k='status'").fetchone()['v']
 def current(c,session):return c.execute('SELECT * FROM participants WHERE session=?' + (' FOR UPDATE' if DATABASE_URL else ''),(session,)).fetchone() if session else None
 def question(row):
  plan=json.loads(row['plan']);pos=row['pos']
@@ -133,6 +140,7 @@ class Handler(BaseHTTPRequestHandler):
    if path=='/api/admin/status':
     v=data.get('status')
     if v not in ('open','closed'):return self.error('حالة غير صحيحة')
+    if v=='open' and time.time()>=CLOSE_AT:return self.error('انتهت المسابقة في 30 نوفمبر 2026 الساعة 11:59 مساءً بتوقيت عُمان',403)
     with conn() as c:c.execute("UPDATE settings SET v=? WHERE k='status'",(v,))
     return self.respond({'status':v})
    if path=='/api/admin/test':
@@ -143,12 +151,13 @@ class Handler(BaseHTTPRequestHandler):
     return self.respond({'ok':True})
   if path=='/api/start':
    name=str(data.get('name','')).strip();org=str(data.get('org','')).strip()
-   if not (2<=len(name)<=100 and 2<=len(org)<=120):return self.error('أدخل الاسم الكامل وجهة العمل بشكل صحيح')
+   if not (2<=len(name)<=100):return self.error('أدخل الاسم الكامل بشكل صحيح')
+   if org and not (2<=len(org)<=120):return self.error('جهة العمل يجب أن تحتوي على حرفين على الأقل أو تُترك فارغة')
    identity=identity_key(name,org)
    with conn() as c:
     c.execute('BEGIN IMMEDIATE')
     if status(c)!='open':return self.error('المسابقة مغلقة حاليًا',403)
-    if c.execute('SELECT 1 FROM participants WHERE identity_key=?',(identity,)).fetchone():return self.error('سُجلت مشاركة بهذا الاسم وجهة العمل مسبقًا',409)
+    if c.execute('SELECT 1 FROM participants WHERE identity_key=?',(identity,)).fetchone():return self.error('سُجلت مشاركة بهذا الاسم والجهة مسبقًا',409)
     plan=[];rng=secrets.SystemRandom()
     for axis,counts in QUOTAS.items():
      for level,n in zip(LEVELS,counts):
@@ -160,7 +169,7 @@ class Handler(BaseHTTPRequestHandler):
     try:
      c.execute('INSERT INTO participants(token,name,org,identity_key,session,started,plan,deadline) VALUES(?,?,?,?,?,?,?,?)',(token,name,org,identity,session,now,json.dumps(plan),now+30))
     except (sqlite3.IntegrityError,Exception) as exc:
-     if 'unique' in str(exc).lower() or 'duplicate' in str(exc).lower():return self.error('سُجلت مشاركة بهذا الاسم وجهة العمل مسبقًا',409)
+     if 'unique' in str(exc).lower() or 'duplicate' in str(exc).lower():return self.error('سُجلت مشاركة بهذا الاسم والجهة مسبقًا',409)
      raise
     row=c.execute('SELECT * FROM participants WHERE token=?',(token,)).fetchone()
     return self.respond({'session':session,'question':question(row)})

@@ -1,24 +1,39 @@
-/* Oman Majd visual enhancement — scoped to welcome, quiz and results only. */
+/* Premium Oman Majd landing page — isolated from certificate, admin and game logic. */
 :root{--om-cream:#fffaf1;--om-green:#174d3d;--om-red:#981f35;--om-gold:#c6a266}
 body{background-color:#f8f2e8}
-.top{max-width:1180px;background:rgba(255,251,244,.87);border:1px solid #e9d8ba;border-radius:0 0 22px 22px;box-shadow:0 8px 24px #5d42200c}
-.container{width:min(100% - 28px,1040px)}
-#welcome,#quiz,#done{position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(255,253,248,.97),rgba(255,247,235,.97));border:1px solid #d7b77c;box-shadow:0 22px 60px #4b3b291b;border-radius:25px}
-#welcome:before,#quiz:before,#done:before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#8e1d32,#d5ad65,#16523c)}
-#welcome{padding:42px clamp(20px,5vw,64px) 38px}
-#welcome h1{font-size:clamp(52px,8vw,90px);text-shadow:0 2px 0 #e8d2a5}
-#welcome .lead{color:#415e51;font-weight:500}
-.om-hero-art{height:185px;margin:22px auto 12px;max-width:850px;border:2px solid #d2b174;border-radius:24px;overflow:hidden;background:linear-gradient(180deg,#edf4f0b0,#fff9eddd),url('/static/oman-heritage.png') center 40%/cover no-repeat;position:relative}
-.om-hero-art:after{content:'عُمان... تاريخٌ وحضارةٌ ومعرفة';position:absolute;bottom:12px;right:18px;left:18px;padding:10px;background:#fffaf0df;border-radius:10px;color:#164b3a;font-size:clamp(14px,2vw,19px);font-weight:800}
-.om-axes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:18px 0 25px}
-.om-axis{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;min-height:112px;padding:12px 7px;border:1px solid #d8bd88;border-radius:17px;background:linear-gradient(180deg,#fffdf7,#f7ecd9);box-shadow:0 3px 10px #7e5d2212;color:#184a3b;font-size:13px;font-weight:800;line-height:1.5}
-.om-axis .om-icon{font-size:28px;line-height:1}
-#welcome .stats>div{border:1px solid #d9c29b;background:#fffaf0;box-shadow:0 3px 8px #765a2710}
-#welcome .stats b{font-size:34px}
-#welcome .form-heading{font-size:19px}
-#welcome .form{max-width:760px;margin:auto}
-#welcome .form .primary,#quiz #next{background:linear-gradient(135deg,#8d1a30,#ae2940);border:1px solid #cda96b;box-shadow:0 4px 0 #6e1b2a24;font-size:18px}
-#quiz{padding:34px clamp(20px,4vw,55px) 38px}
+.top{max-width:1260px;background:rgba(255,251,244,.90);border:1px solid #e9d8ba;border-radius:0 0 24px 24px;box-shadow:0 8px 24px #5d42200c}
+.container{width:min(100% - 28px,1180px)}
+#welcome,#quiz,#done{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(165deg,rgba(255,253,248,.97),rgba(255,246,232,.97));border:1px solid #d7b77c;box-shadow:0 24px 75px #4b3b2926;border-radius:28px}
+#welcome:before,#quiz:before,#done:before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#8e1d32,#d5ad65,#16523c);z-index:3}
+#welcome{padding:24px clamp(18px,4vw,58px) 30px;text-align:center}
+/* Side scenery remains decorative and never covers form controls. */
+#welcome:after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.16;background:radial-gradient(circle at 3% 30%,#d6a354 0,transparent 28%),radial-gradient(circle at 97% 50%,#9cbdad 0,transparent 27%)}
+#welcome .hero-crown{margin:0 0 5px;color:#c69e56;font-size:20px}
+#welcome .eyebrow{font-size:13px;letter-spacing:.2px}
+#welcome h1{font-size:clamp(56px,7vw,102px);line-height:1.04;margin:10px 0 4px;text-shadow:0 3px 0 #e9d6b1}
+#welcome .lead{color:#345849;font-size:clamp(13px,1.5vw,17px);font-weight:650;line-height:1.65;margin:12px auto 16px}
+/* Framed headline and Oman heritage panoramic motif via existing local asset. */
+#welcome .eyebrow:before{content:'';display:block;width:min(100%,620px);height:66px;margin:0 auto 7px;border-radius:80% 80% 8px 8px;background:linear-gradient(180deg,transparent,rgba(255,250,240,.55)),url('/static/oman-heritage.png') center 43%/cover no-repeat;mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);opacity:.68}
+#welcome .om-hero-art{display:none!important}
+#welcome #welcomeMusicToggle{display:inline-flex;justify-content:center;align-items:center;margin:6px auto 0;border:1px solid #d7bf90;border-radius:999px;padding:9px 20px;background:#edf3e9;color:#174d3d;box-shadow:0 3px 10px #24452c12}
+#welcome .om-axis-title{display:flex;align-items:center;justify-content:center;gap:12px;margin:12px auto 9px;color:#8f2035;font-size:16px;font-weight:850}
+#welcome .om-axis-title:before,#welcome .om-axis-title:after{content:'✦';color:#c49b52;font-size:12px}
+.om-axes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:0 auto 14px;max-width:970px}
+.om-axis{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:89px;padding:10px 6px;border:1px solid #d7b980;border-radius:17px;background:linear-gradient(165deg,#fffdf7,#f5e9d5);box-shadow:0 4px 13px #715c3613;color:#174d3d;font-size:clamp(11px,1.1vw,14px);font-weight:800;line-height:1.35}
+.om-axis .om-icon{font-size:25px;line-height:1.15}
+#welcome .stats{max-width:970px;margin:0 auto 16px;gap:12px}
+#welcome .stats>div{padding:11px 8px;background:linear-gradient(180deg,#fffaf0,#f6ecda);border:1px solid #dbc398;box-shadow:0 3px 12px #6c512017}
+#welcome .stats b{font-size:clamp(27px,3vw,37px)}
+#welcome .stats span{font-size:13px;color:#53665b}
+#welcome .form-heading{justify-content:center;margin:10px auto 12px;font-size:19px}
+#welcome .form-heading .fine-line{max-width:130px}
+#welcome .form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 18px;max-width:970px;margin:auto}
+#welcome .form label{font-size:13px}
+#welcome .form input{height:49px;background:#fffefb;border-color:#d8c6a9}
+#welcome .form .primary{grid-column:1/-1;justify-self:center;width:min(100%,450px);margin-top:1px;padding:13px 20px;font-size:20px;border:1px solid #d6aa5f;border-radius:18px;background:linear-gradient(135deg,#8d142d,#b0253d);box-shadow:0 5px 0 #6513262c,0 10px 25px #681d2a22}
+#welcome .hint{margin:11px auto 0;font-size:11px}
+/* Game screen — visual enhancement only, never reveals correct answers. */
+#quiz{padding:32px clamp(20px,4vw,55px) 38px}
 #quiz .quiz-head{font-size:16px;font-weight:800}
 #quiz .pill{border:1px solid #bca46e;background:#f9f0de;color:#194b3b}
 #quiz .progress{height:13px;background:#e8dfce}
@@ -29,11 +44,13 @@ body{background-color:#f8f2e8}
 #quiz .options{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 #quiz .option{border:1px solid #d7bd91;background:#fffdf8;min-height:70px;font-size:16px}
 #quiz .option.selected{background:#e5f3e8;border:2px solid #21704f}
-#done{text-align:center;padding:50px 30px}
+#quiz #next{background:linear-gradient(135deg,#8d1a30,#ae2940);border:1px solid #cda96b;font-size:18px}
+#done{text-align:center;padding:45px 30px}
 #done .trophy{font-size:74px}
 #done h2{color:#96213a;font-size:clamp(28px,5vw,40px)}
 #done .score{border:1px solid #c8a56d;background:#fff6e6}
 #done .actions button{border:1px solid #c8a56d}
-/* Keep certificate and admin styles unchanged. */
-@media(max-width:750px){.om-axes{grid-template-columns:repeat(2,minmax(0,1fr))}.om-axis:last-child{grid-column:1/-1}.om-hero-art{height:135px}#quiz .options{grid-template-columns:1fr}#welcome{padding:30px 18px}#quiz{padding:28px 18px}#quiz h2{padding:17px;font-size:21px}}
-@media print{.om-hero-art,.om-axes{display:none!important}}
+@media(max-width:780px){#welcome{padding:25px 16px}.om-axes{grid-template-columns:repeat(3,minmax(0,1fr))}.om-axis{min-height:85px}#welcome .form{grid-template-columns:1fr}#welcome .form .primary{grid-column:1}#quiz .options{grid-template-columns:1fr}#quiz h2{padding:17px;font-size:21px}}
+@media(max-width:470px){#welcome .eyebrow:before{height:38px}.om-axes{grid-template-columns:repeat(2,minmax(0,1fr))}.om-axis:last-child{grid-column:1/-1}#welcome h1{font-size:55px}#welcome .stats>div{padding:11px 3px}#welcome .stats b{font-size:26px}#welcome .stats span{font-size:10px}#welcome .om-axis-title{font-size:13px}}
+/* Certificate A4 layout and admin are intentionally untouched. */
+@media print{.om-axes,.om-axis-title{display:none!important}}
